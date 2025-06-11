@@ -77,7 +77,16 @@
         .articlePic{
             width:100%; 
             height:100%;
+
         }
+        
+        .typing-container h2 {
+            font-family: monospace;
+            white-space: nowrap;
+            overflow: hidden;
+            display: block;
+        }
+
         footer{
             display: flex;
             justify-content: center;
@@ -136,9 +145,9 @@
             .article1{
                 flex-direction: row;
             }
-            .articlePic{
-                width:550px; 
-                height:500px;
+            .articlePic{ 
+                height:80vh;
+                margin-left: 70px;
             }
         }
     </style>
@@ -156,7 +165,7 @@
                 <div class="navButts py-2 py-md-1">
                     <div><a href="index.html"><b>Home</b></a></div>
                     <div><a href="about.html">About</a></div>
-                    <div><a href="works.html">Works</a></div>
+                    <div><a href="works.html">Projects</a></div>
                     <div><a href="contact.html">Contact</a></div>
                 </div>
             </div>
@@ -170,14 +179,15 @@
             <article class="backgroundArticle">
                 <div class="container-fluid article1">
                     <div class="text-center py-1 py-md-1">
-                        <h2 class="display-6 text-dark">HAVE AN IDEA IN MIND?<br>
-                            LET'S MAKE IT HAPPEN!
-                        </h2>
-                        <h5 style="color: rgb(128, 128, 128);">Meet Alex Pacaldo, A 19-year-old web developer</h5>
+                        <div class="typing-container">
+                            <h2 id="line1" class="display-6 text-dark"></h2>
+                            <h2 id="line2" class="display-6 text-dark"></h2>
+                        </div>
+                        <h5 style="color: rgb(128, 128, 128);">Meet Alex Pacaldo, A 22-year-old web developer</h5>
                         <br>
                         <a class="btn btn-dark" href="contact.html" role="button">HIRE ME!</a>
                     </div>
-                    <div><img src="img/home/CompGuy.png" alt="" class="articlePic"></div>
+                    <div><img src="img/home/CompGuy2.png" alt="" class="articlePic"></div>
                 </div>
             </article>
             <h1 class="py-3 mx-5 text-white">Recent Projects</h1>
@@ -222,7 +232,38 @@
 
 
     <!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2JDz1yB1kUjH4z3YzJv7lHJfJm9I6x5r4P7dVZzHRRsxZ1rQerHhYvlEvMC" crossorigin="anonymous"></script>
+
+<!-- Typing Effect Script -->
+<script>
+    const text1 = "HAVE AN IDEA IN MIND?";
+    const text2 = "LET'S MAKE IT HAPPEN!";
+    const line1 = document.getElementById("line1");
+    const line2 = document.getElementById("line2");
+
+    let index1 = 0;
+    let index2 = 0;
+
+    function typeLine1() {
+        if (index1 < text1.length) {
+            line1.textContent += text1.charAt(index1);
+            index1++;
+            setTimeout(typeLine1, 100);
+        } else {
+            setTimeout(typeLine2, 500);
+        }
+    }
+
+    function typeLine2() {
+        if (index2 < text2.length) {
+            line2.textContent += text2.charAt(index2);
+            index2++;
+            setTimeout(typeLine2, 100);
+        }
+    }
+
+    window.addEventListener('DOMContentLoaded', typeLine1);
+</script>
 </body>
 </html>
 
