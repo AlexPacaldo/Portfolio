@@ -138,9 +138,52 @@
         main article{
             min-height: 93vh;
         }
+        .aboutME{
+            margin-top: 1%;
+            margin-left: 2%;
+            margin-right: 2%;
+            border: 3px solid #ccc;
+            padding: 15px;
+            
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Default to 2 columns */
+            gap: 15px;
+            margin-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 1rem;
+            max-width: 950px;
+        }
+
+        .skill-item {
+            background-color: #f7f7f7;
+            border-radius: 8px;
+            padding: 12px 10px;
+            font-size: 15px;
+            font-weight: 500;
+            text-align: center;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .skill-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
         @media screen and (min-width:500px){
             .articleCont{
             width: 950px;    
+            }
+        }
+        @media (max-width: 576px) {
+            .skill-item {
+                font-size: 14px;
+                padding: 10px;
+            }
+            .skills-grid {
+                gap: 10px;
             }
         }
         @media screen and (min-width:768px){
@@ -154,6 +197,12 @@
                 width: auto;
                 margin: auto;
             } */
+            
+        }
+        @media screen and (min-width:900px) {
+            .skills-grid {
+                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Expand beyond 768px */
+            }
         }
     </style>
 </head>
@@ -185,19 +234,37 @@
                 <div class="articleCont container-fluid">
                     <div class="container-fluid d-flex align-items-center flex-column py-5">
                         <img src="img/about/me2.png" alt="" height="150" width="150" style="border-radius: 50%;"><br>
-                        <h5 style="font-size: 24px; font-weight:900">Alex Pacaldo</h5>
+                        <h5 style="font-size: 40px; font-weight:900">Alex Pacaldo</h5>
                     </div>
                     <div class="px-2">
                         <h1><b>About Me</b></h1>
                         <div class="d-flex flex-column flex-md-row">
-                            <p>
-                                Hello! My name is Alexander John G. Pacaldo, a 22-year-old aspiring web developer from Cainta, Rizal, Philippines. I am currently in my third year of a Bachelor of Science in Computer Science at STI College Ortigas-Cainta.
+                            <p class="aboutME">
+                                Hello! My name is Alexander John G. Pacaldo, a 22-year-old aspiring web developer from Cainta, Rizal, Philippines. I am currently in my third year of a Bachelor of Science in Computer Science at STI College Ortigas-Cainta. <br><br>
                                 Before pursuing my degree, I completed the KodeGo Bootcamp, a 12-week intensive training program in web development, where I was recognized as one of the Top Students and awarded for Best Mini Project 2. I also completed 
-                                my Senior High School under the STEM strand at the same institution. I have a strong interest in technology, coding, sports, and entertainment. I enjoy exploring new programming concepts, watching movies and TV shows, 
+                                my Senior High School under the STEM strand at the same institution. <br><br> I have a strong interest in technology, coding, sports, and entertainment. I enjoy exploring new programming concepts, watching movies and TV shows, 
                                 and working on personal development projects. Although I began my programming journey recently, I’m passionate and committed to improving my skills and becoming a successful professional in the field of web development.
                             </p>
                         </div>
                         <br><br>
+                        
+                        <h1><b>Skills</b></h1>
+                        <h3><b>General Development Skills</b></h3>
+                        <div class="skills-grid">
+                            <div class="skill-item">💻 GitHub</div>
+                            <div class="skill-item">🌐 HTML5</div>
+                            <div class="skill-item">🎨 CSS3</div>
+                            <div class="skill-item">📱 Responsive Design</div>
+                            <div class="skill-item">⚙️ JavaScript</div>
+                            <div class="skill-item">☕ Java</div>
+                            <div class="skill-item">🧩 Bootstrap</div>
+                            <div class="skill-item">⚛️ ReactJS</div>
+                            <div class="skill-item">🔗 Node.js</div>
+                            <div class="skill-item">🛢️ MySQL</div>
+                            <div class="skill-item">🔣 C#</div>
+                        </div><br><br>
+
+
                         <h1><b>Education</b></h1>
                         <br>
                         <div class="timeline">
@@ -224,27 +291,9 @@
                                 <h3><b>Greenland Academy</b></h3>
                                 <h5>Junior High School Completer</h5>
                             </div>
-                        </div><br><br>
-                        <h1><b>Skills</b></h1>
-                        <h3><b>General Development Skills</b></h3>
-                        <div class="row row-cols-2 px-4 px-sm-5 gx-5">
-                            <ul class="col">
-                                <li>Github</li>
-                                <li>HTML 5</li>
-                                <li>CSS 3</li>
-                                <li>Responsive Web Design</li>
-                                <li>JavaScript</li>
-                                <li>Java</li>
-                            </ul>
-                            <ul class="col">
-                                <li>Bootstrap</li>
-                                <li>ReactJs</li>
-                                <li>NodeJs</li>
-                                <li>MySQL</li>
-                                <li>C#</li>
-                            </ul>
-                        </div><br><br>
+                        </div>
                     </div>
+                    <br><br>
             </article>
         </main>
         <footer>
