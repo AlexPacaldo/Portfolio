@@ -76,12 +76,29 @@
         }
         .contactMe{
             font-size: large;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            align-items: center;
         }
         .contactMe a{
             color: #000;
         }
         .contactMe a:hover{
             font-size: 20px;
+        }
+        .formm{
+            width: 50%;
+            border-bottom: 1px solid rgba(91, 91, 91, 0.217);
+            padding-bottom:5%;
+            width: 80%;
+        }
+        .formm2{
+            
+        }
+        .formm button{
+            margin-left: 35%;
+            width: 40%;
         }
         footer{
             display: flex;
@@ -113,6 +130,9 @@
             .articleCont{
             width:850px;    
             }
+            .formm2{
+                margin-right: 40%;
+            }
         }
         @media screen and (min-width:768px){
             .navButts{
@@ -120,6 +140,23 @@
             }
             .navSocialMedia{
                 display: flex;
+            }
+            .contactMe{
+                flex-direction: row;
+            }
+            .formm{
+                width: 50%;
+                border-right: 1px solid rgba(91, 91, 91, 0.217);
+                padding-right:5%;
+                border-bottom: 0px;
+                padding-bottom:0px 
+            }
+            .formm button{
+                margin-left: 35%;
+                width: 40%;
+            }
+            .formm2{
+                margin-right: 0;
             }
         }
     </style>
@@ -142,7 +179,7 @@
                 </div>
             </div>
             <div class="navSocialMedia">
-                <div><a href="https://www.facebook.com/alex.pacaldo.14/"><i class="bi bi-facebook"></i></a></div>
+                <div><a href="https://www.linkedin.com/in/alex-pacaldo-00046a269/"><i class="bi bi-linkedin"></i></a></div>
                 <div><a href="https://github.com/AlexPacaldo"><i class="bi bi-github"></i></a></div>
                 <div><a href="mailto:alexpacaldo1105@gmail.com?subject = Feedback&body = Message"><i class="bi bi-envelope-fill"></i></a></div>
             </div>
@@ -154,26 +191,46 @@
                         <h1><b>Contact Me</b></h1>
                         <h3>Get in touch with me:</h3>
                         <div class="py-5 px-md-3 contactMe">
-                            <a href="mailto:alexpacaldo1105@gmail.com?subject = Feedback&body = Message">
-                                <i class="bi bi-envelope-fill mx-2"></i>
-                                alexpacaldo1105@gmail.com
-                            </a>
-                                <br><br>
-                            <a href="https://www.facebook.com/alex.pacaldo.14/">
-                                <i class="bi bi-facebook mx-2"></i>
-                                Alex Pacaldo
-                            </a>
-                                <br><br>
-                            <a href="https://github.com/AlexPacaldo">
-                                <i class="bi bi-github mx-2"></i>
-                                AlexPacaldo
-                            </a>
-                                <br><br>
-                            <a href="tel:09682855232">
-                                <i class="bi bi-telephone-fill mx-2"></i>
-                                09682855232
-                            </a>
-                                <br><br>
+                           <div class="formm">
+                                <form action="https://formsubmit.co/alexpacaldo1105@gmail.com" method="POST">
+                                    
+                                    <label for="name">Name</label>
+                                    <input class="form-control" type="text" name="name" required ><br>
+
+                                    <label for="email">Email</label>
+                                    <input class="form-control" type="text" name="email" required><br>
+
+                                    <label for="message">Message</label>
+                                    <textarea class="form-control" name="message" id="" rows="3" required></textarea>
+                                    <br>
+
+                                    <input type="hidden" name="_captcha" value="false">
+                                    <input type="hidden" name="_next" value="https://alexpacaldo.github.io/Portfolio/ThankYouPage.html">
+
+                                    <button type="submit" class="btn btn-dark">Submit</button>
+                                </form>
+
+                           </div>
+                           <div class="formm2">
+                                <a href="mailto:alexpacaldo1105@gmail.com?subject = Feedback&body = Message">
+                                    <i class="bi bi-envelope-fill mx-2"></i>
+                                    alexpacaldo1105@gmail.com
+                                </a>
+                                    <br><br>
+                                <a href="https://www.linkedin.com/in/alex-pacaldo-00046a269/">
+                                    <i class="bi bi-linkedin mx-2"></i>
+                                    Alex Pacaldo
+                                </a>
+                                    <br><br>
+                                <a href="https://github.com/AlexPacaldo">
+                                    <i class="bi bi-github mx-2"></i>
+                                    AlexPacaldo
+                                </a>
+                                    <br><br>
+                           </div>
+
+                            
+                                <br>
                         </div>
                         <p>
                             Thank you for visiting this page for my contact information you made a great decision!
@@ -189,7 +246,7 @@
         </main>
         <footer>
             <div class="footerSocialMedia">
-                <div><a href="https://www.facebook.com/alex.pacaldo.14/"><i class="bi bi-facebook"></i></a></div>
+                <div><a href="https://www.linkedin.com/in/alex-pacaldo-00046a269/"><i class="bi bi-linkedin"></i></a></div>
                 <div><a href="https://github.com/AlexPacaldo"><i class="bi bi-github"></i></a></div>
                 <div><a href="mailto:alexpacaldo1105@gmail.com?subject = Feedback&body = Message"><i class="bi bi-envelope-fill"></i></a></div>
             </div>
