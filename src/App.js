@@ -169,7 +169,7 @@ function App() {
                   </div>
                   <div class="row row-cols-1 row-cols-md-2 gx-3">
 
-                    <div class="col" data-aos="fade-right">
+                    <div class="col" data-aos="fade-down">
                       <div class="hover01 column">
                         <div>
                           <a href="https://alexpacaldo.github.io/ExamItem2/">
@@ -193,7 +193,7 @@ function App() {
                       </div>
                     </div>
 
-                    <div class="col" data-aos="fade-up">
+                    <div class="col" data-aos="fade-right">
                       <div class="hover01 column">
                         <div>
                           <a href="https://alexpacaldo.github.io/MiniProject2/">
