@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/Portfolio/static/css/main.69a81ac0.css",
+    "main.js": "/Portfolio/static/js/main.9b05ce99.js",
+    "static/js/453.6067169d.chunk.js": "/Portfolio/static/js/453.6067169d.chunk.js",
+    "static/media/aranDesk.png": "/Portfolio/static/media/aranDesk.8f6484bec6a2892b11ab.png",
+    "static/media/Rekta Sikad.png": "/Portfolio/static/media/Rekta Sikad.248e35e1dd2ca9815228.png",
+    "static/media/BookWorm.png": "/Portfolio/static/media/BookWorm.ffb2e6af4dbc51b8cb3b.png",
+    "static/media/me2.png": "/Portfolio/static/media/me2.8d5751b00f40de8ff2d7.png",
+    "static/media/uCookDesk.png": "/Portfolio/static/media/uCookDesk.e8b9237567359aabb4d4.png",
+    "static/media/lapPhonearan.png": "/Portfolio/static/media/lapPhonearan.c35e62c26cbdd63f0ea5.png",
+    "static/media/lapPhonerekta.png": "/Portfolio/static/media/lapPhonerekta.1d403a9794df960bbf45.png",
+    "static/media/lapPhoneuCook.png": "/Portfolio/static/media/lapPhoneuCook.150755b1dee8f657060a.png",
+    "static/media/LOGO.jpg": "/Portfolio/static/media/LOGO.305fa0d503b616885ecf.jpg",
+    "index.html": "/Portfolio/index.html",
+    "main.69a81ac0.css.map": "/Portfolio/static/css/main.69a81ac0.css.map",
+    "main.9b05ce99.js.map": "/Portfolio/static/js/main.9b05ce99.js.map",
+    "453.6067169d.chunk.js.map": "/Portfolio/static/js/453.6067169d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.69a81ac0.css",
+    "static/js/main.9b05ce99.js"
+  ]
+}
