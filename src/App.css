@@ -1,38 +1,379 @@
-.App {
-  text-align: center;
-}
+    *{
+            box-sizing: border-box;
+            margin: 0;
+        }
+        main{
+            display: flex;
+            flex-direction: column;
+        }
+        .container1{
+            display: flex;
+            flex-direction: column;
+        }
+        nav{
+            display: flex;
+            flex-direction: row;
+            min-height: 7vh;
+            align-items: center;
+            background-color: white;
+            margin-left: 15%;
+            margin-right: 15%;
+        }
+        nav a{
+            text-decoration: none;
+        }
+        .navName img{
+            margin-top: 10px;
+            height:5vh;
+        }
+        .navButts{
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            justify-content: center;
+            align-items: center;
+            margin-left: -3%;
+        }
+        .navButts a{
+            color: rgb(91, 91, 91);;
+        }
+        .navButts a:hover{
+            padding: 5px;
+            color: black;
+            border-bottom: 1px solid black;
+        }
+        .navSocialMedia{
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            display: none;
+        }
+        .navSocialMedia a{
+            color: black;
+        }
+        .navSocialMedia a:hover{
+            padding: 4px 6px;
+            background-color: black;
+            border: 1px solid black;
+            border-radius: 50%;
+            color: white;
+        }
+        .backgroundArticle{
+            background-color: white;
+        }
+        .articlePic{
+            border-radius: 50%;
+            border: 10px solid black;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+        }
+        
+        .typing-container{
+            margin-top: 10%;
+        }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+        .typing-container h2 {
+            font-weight: 1000;
+        }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+        footer{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 7vh;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
+            overflow: hidden;
+            background-color: white;
+        }
+        .footerSocialMedia{
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+        }
+        .footerSocialMedia a{
+            color: black;
+        }
+        .footerSocialMedia a:hover{
+            padding: 4px 6px;
+            background-color: black;
+            border: 1px solid black;
+            border-radius: 50%;
+            color: white;
+        }
+        main article{
+            min-height: 93vh;
+            display: flex;
+            align-items: center;
+        }
+        .article1{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        .article1 h5{
+            color: rgb(91, 91, 91);;
+        }
+        main aside{
+            background-color: #cdcdcdc0;
+            flex: 1;
+        }
+        .RecentProj{
+            color: white;
+            text-align: center;
+            background-color: #000;
+            margin-bottom: -1px;
+            padding-top: 10px;
+            padding-bottom:10px ;
+            font-weight: 800;
 
-.App-link {
-  color: #61dafb;
-}
+        }
+        .carousel-item{
+            background-color: #000;
+        }
+        .carousel-caption h2{
+            background: rgb(0, 0, 0);
+            opacity: 0.8;
+            border-radius: 10%;
+        }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+        .articleCont {
+            width: 100%;
+        }
+
+        .timeline {
+            width: auto;
+            border-left: 2px solid #ccc;
+            padding: 0 10px 0 31px;
+        }
+
+        .timeCont {
+            background-color: #fff;
+            padding: 10px 25px;
+            font-size: 16px;
+            border: 3px solid #ccc;
+            border-radius: 1rem;
+            line-height: 1.7;
+            position: relative;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .timeCont::before {
+            content: '';
+            display: block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #000;
+            border: 3px solid #ddd;
+            position: absolute;
+            top: 10px;
+            left: -40px;
+        }
+
+        .timeCont::after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-color: transparent#ddd transparent transparent;
+            border-width: 8px;
+            position: absolute;
+            left: -17px;
+            top: 10px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            /* Default to 2 columns */
+            gap: 15px;
+            margin-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 1rem;
+            max-width: 950px;
+        }
+
+        .skill-item {
+            background-color: #f7f7f7;
+            border-radius: 8px;
+            padding: 12px 10px;
+            font-size: 15px;
+            font-weight: 500;
+            text-align: center;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .skill-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .About{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        .grid1about{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(1, 1fr);
+            gap: 1.5rem;
+            padding: 2rem;
+            width: 80vw;
+            
+            
+          
+        }
+
+        .AboutDesc{
+            border-radius: 1rem;
+            padding: 2rem;
+            grid-area: 1 / 1 / 2 / 2;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .skills-grid{
+            grid-area: 1 / 2 / 2 / 3;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            margin-top: -0px;
+        }
+
+        .timeLcont{
+            grid-column: span 2; /* Full width */
+            border-radius: 1rem;
+            padding: 60px;
+            grid-area: 2 / 1 / 3 / 3;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
+            overflow: hidden;
+        }
+
+
+        .Projects{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        .ProjCont{
+            width: 77vw;
+        }
+
+        
+        .gridCont{
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
+            overflow: hidden;
+            border-radius: 1rem;
+        }
+        .hover01 figure img {
+            opacity: 1;
+            -webkit-transform: scale(0.99);
+            transform: scale(0.99);
+            -webkit-transition: .3s ease-in-out;
+            transition: .3s ease-in-out;
+        }
+        .hover01 figure:hover img {
+            opacity: .5;
+            -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+        }
+
+        .Contacts{
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        
+        }
+
+        .ContactCont{
+            display: flex;
+            flex-direction: column;
+            width: 76.5vw;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
+            overflow: hidden;
+            border-radius: 1rem;
+            padding: 50px;
+        }
+        .CC1{
+            text-align: center;
+        }
+
+        .contactMe{
+            font-size: large;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            align-items: center;
+        }
+        .contactMe a{
+            color: #000;
+        }
+        .contactMe a:hover{
+            font-size: 20px;
+        }
+        .formm{
+            width: 50%;
+            border-bottom: 1px solid rgba(91, 91, 91, 0.217);
+            padding-bottom:5%;
+            width: 80%;
+        }
+        .formm button{
+            margin-left: 35%;
+            width: 40%;
+        }
+
+        @media screen and (min-width:768px){
+            .navButts{
+                flex-direction: row;
+            }
+            .navSocialMedia{
+                display: flex;
+            }
+            .article1{
+                flex-direction: row;
+            }
+            .articlePic{ 
+                height:60vh;
+                margin-left: 70px;
+            }
+            .typing-container{
+            margin-top:0;
+            }
+            .contactMe{
+                flex-direction: row;
+            }
+            .formm{
+                width: 50%;
+                border-right: 1px solid rgba(91, 91, 91, 0.217);
+                padding-right:5%;
+                border-bottom: 0px;
+                padding-bottom:0px 
+            }
+            .formm button{
+                margin-left: 35%;
+                width: 40%;
+            }
+            .formm2{
+                margin-right: 0;
+            }
+        }
