@@ -241,7 +241,6 @@
 
         .grid1about{
             display: grid;
-            grid-template-columns: 1fr;
             grid-template-rows: auto;
             gap: 1.5rem;
             padding: 2rem;
@@ -471,6 +470,11 @@
             .formm2{
                 margin-right: 0;
             }
+        }
+        @media screen and (max-width: 767px) {
+        .grid1about {
+            grid-template-columns: 1fr;
+        }
         }
         @media screen and (min-width:900px) {
             .skills-grid {
