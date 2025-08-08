@@ -120,71 +120,63 @@ function App() {
             <div className="articleCont container-fluid">
               <div className='About'>
                 <h1 data-aos="zoom-in"><b>About Me</b></h1>
+                <div className='Aboutt'>
 
-                <div className='grid1about'>
+                  <div className='grid1about'>
 
-                  <div className="AboutDesc d-flex flex-column flex-md-row" data-aos="fade-right">
-                    <p className="aboutME">
-                      Hello! My name is Alexander John G. Pacaldo, a 22-year-old aspiring web developer from
-                      Cainta, Rizal, Philippines. I am currently in my third year of a Bachelor of Science in
-                      Computer Science at STI College Ortigas-Cainta. <br></br><br></br>
-                      Before pursuing my degree, I completed the KodeGo Bootcamp, a 12-week intensive training
-                      program in web development, where I was recognized as one of the Top Students and
-                      awarded for Best Mini Project 2. I also completed
-                      my Senior High School under the STEM strand at the same institution. <br></br><br></br> I have a
-                      strong interest in technology, coding, sports, and entertainment. I enjoy exploring new
-                      programming concepts, watching movies and TV shows,
-                      and working on personal development projects. Although I began my programming journey
-                      recently, I’m passionate and committed to improving my skills and becoming a successful
-                      professional in the field of web development.
-                    </p>
-                  </div>
+                    <div className="AboutDesc d-flex flex-column flex-md-row" data-aos="fade-right">
+                      <p className="aboutME">
+                        Hello! My name is Alexander John G. Pacaldo, a 22-year-old aspiring web developer from
+                        Cainta, Rizal, Philippines. I am currently in my third year of a Bachelor of Science in
+                        Computer Science at STI College Ortigas-Cainta. <br></br><br></br>
+                        Before pursuing my degree, I completed the KodeGo Bootcamp, a 12-week intensive training
+                        program in web development, where I was recognized as one of the Top Students and
+                        awarded for Best Mini Project 2. I also completed
+                        my Senior High School under the STEM strand at the same institution. <br></br><br></br> I have a
+                        strong interest in technology, coding, sports, and entertainment. I enjoy exploring new
+                        programming concepts, watching movies and TV shows,
+                        and working on personal development projects. Although I began my programming journey
+                        recently, I’m passionate and committed to improving my skills and becoming a successful
+                        professional in the field of web development.
+                      </p>
+                    </div>
 
-                  <div className="skills-grid" data-aos="fade-left">
-                    <div className="skill-item">💻 GitHub</div>
-                    <div className="skill-item">🌐 HTML5</div>
-                    <div className="skill-item">🎨 CSS3</div>
-                    <div className="skill-item">📱 Responsive Design</div>
-                    <div className="skill-item">⚙️ JavaScript</div>
-                    <div className="skill-item">☕ Java</div>
-                    <div className="skill-item">🧩 Bootstrap</div>
-                    <div className="skill-item">⚛️ ReactJS</div>
-                    <div className="skill-item">🔗 Node.js</div>
-                    <div className="skill-item">🛢️ MySQL</div>
-                    <div className="skill-item">🔣 C#</div>
-                  </div>
-                  
-                  <div className='timeLcont' data-aos="fade-up">
-                    <div className="timeline">
-                      <div className="timeCont">
-                        <h5>August 2023 - Present</h5>
-                        <h3><b>STI College Ortigas-Cainta</b></h3>
-                        <h5>Bachelor of Science in Computer Science</h5>
-                      </div>
-                      <div className="timeCont">
-                        <h5>August 2022 - December 2022</h5>
-                        <h3><b>Kodego Bootcamp</b></h3>
-                        <h5>
-                          Completed an intensive 12-week web development program. <br></br>
-                          <b>Recognitions:</b> Top Student, Best Mini Project 2
-                        </h5>
-                      </div>
-                      <div className="timeCont">
-                        <h5>2020 - 2022</h5>
-                        <h3><b>STI Ortigas - Cainta </b></h3>
-                        <h5>Senior High School STEM Student Completer</h5>
-                      </div>
-                      <div className="timeCont">
-                        <h5>2016 - 2020</h5>
-                        <h3><b>Greenland Academy</b></h3>
-                        <h5>Junior High School Completer</h5>
+                    <div className="skills-grid" data-aos="fade-left">
+                      <div className="skill-item">💻 GitHub</div>
+                      <div className="skill-item">🌐 HTML5</div>
+                      <div className="skill-item">🎨 CSS3</div>
+                      <div className="skill-item">📱 Responsive Design</div>
+                      <div className="skill-item">⚙️ JavaScript</div>
+                      <div className="skill-item">☕ Java</div>
+                      <div className="skill-item">🧩 Bootstrap</div>
+                      <div className="skill-item">⚛️ ReactJS</div>
+                      <div className="skill-item">🔗 Node.js</div>
+                      <div className="skill-item">🛢️ MySQL</div>
+                      <div className="skill-item">🔣 C#</div>
+                    </div>
+                    
+                    <div className='timeLcont' data-aos="fade-up">
+                      <div className="timeline">
+                        <div className="timeCont">
+                          <h5>August 2023 - Present</h5>
+                          <h3><b>STI College Ortigas-Cainta</b></h3>
+                          <h5>Bachelor of Science in Computer Science</h5>
+                        </div>
+                        <div className="timeCont">
+                          <h5>August 2022 - December 2022</h5>
+                          <h3><b>Kodego Bootcamp</b></h3>
+                          <h5>
+                            Completed an intensive 12-week web development program. <br></br>
+                            <b>Recognitions:</b> Top Student, Best Mini Project 2
+                          </h5>
+                        </div>
+                        
                       </div>
                     </div>
+
                   </div>
 
                 </div>
-
-
               </div>
 
 
@@ -295,7 +287,7 @@ function App() {
 
                     <br></br>
                   </div>
-                  <p>
+                  <p className='ContMess'>
                     Thank you for visiting this page for my contact information you made a great decision!
                     I am accepting offers for full-time/part-time remote positions as a Full-Stack Developer.
                     Contact me if you are interested!
