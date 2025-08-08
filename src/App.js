@@ -123,7 +123,7 @@ function App() {
                 <div className='Aboutt'>
 
                   <div className='grid1about'>
-
+                
                     <div className="AboutDesc d-flex flex-column flex-md-row" data-aos="fade-right">
                       <p className="aboutME">
                         Hello! My name is Alexander John G. Pacaldo, a 22-year-old aspiring web developer from

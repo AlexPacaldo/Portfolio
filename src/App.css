@@ -195,13 +195,13 @@
         }
 
         .skills-grid {
+            border-radius: 1rem;
+            padding: 2rem;
             display: grid;
             gap: 15px;
-            margin-top: 20px;
-            margin-left: auto;
-            margin-right: auto;
-            padding: 0 1rem;
             max-width: 950px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
+            overflow: hidden;
         }
 
         .skill-item {
@@ -238,37 +238,23 @@
         }
 
         .grid1about{
-            display: grid;
-            grid-template-rows: auto;
             gap: 1.5rem;
             padding: 2rem;
             width: auto;
+            display: grid;
+            grid-template-columns: 1fr;
         }
 
         .AboutDesc{
             border-radius: 1rem;
             padding: 2rem;
-            grid-area:auto;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
             overflow: hidden;
             width: 100%;
         }
 
-        .skills-grid{
-            grid-area: auto;
-            border-radius: 1rem;
-            padding: 2rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
-            overflow: hidden;
-            width: 100%;
-            height: 100%;
-            margin-top: -0px;
-            grid-template-columns: 1fr;
-            grid-template-rows: auto;
-        }
 
         .timeLcont{
-            grid-column: span 2; /* Full width */
             border-radius: 1rem;
             padding: 60px;
             grid-area: auto;
@@ -370,9 +356,7 @@
                 font-size: 14px;
                 padding: 10px;
             }
-            .skills-grid {
-                gap: 10px;
-            }
+
         }
 
         @media screen and (min-width:768px){
@@ -391,37 +375,26 @@
             }
 
             .grid1about{
-                grid-template-columns: repeat(2, 1fr);
-                grid-template-rows: repeat(1, 1fr);
                 width: 80vw;
+                grid-template-columns: repeat(2, 1fr);
             }
 
+            .skills-grid{
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            
             
             .AboutDesc{
                 border-radius: 1rem;
                 padding: 2rem;
-                grid-area: 1 / 1 / 2 / 2;
+                display: grid;
                 grid-template-columns: repeat(2, 1fr);
                 box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
                 overflow: hidden;
                 width: 100%;
             }
 
-            .skills-grid{
-                grid-area: 1 / 2 / 2 / 3;
-                border-radius: 1rem;
-                padding: 2rem;
-                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
-                overflow: hidden;
-                width: 100%;
-                height: 100%;
-                margin-top: -0px;
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .timeLcont{
-                grid-area: 2 / 1 / 3 / 3; 
-            }
 
 
             .ProjCont{
@@ -471,18 +444,19 @@
                 margin-right: 0;
             }
         }
-        @media screen and (max-width: 767px) {
-        .grid1about {
-            grid-template-columns: 1fr;
-        }
-        .skills-grid {
-            grid-template-columns: 1fr;
-        }
+        @media screen and (max-width:767px) {
+            .grid1about {
+                grid-template-columns: 1fr;
+            }
 
-        .AboutDesc {
-            display: grid;
-            grid-template-columns: 1fr;
-        }
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .AboutDesc {
+                display: grid;
+                grid-template-columns: 1fr;
+            }
         }
         @media screen and (min-width:900px) {
             .skills-grid {
