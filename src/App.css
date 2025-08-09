@@ -1,3 +1,4 @@
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
         html, body {
         overflow-x: hidden;
         }        
@@ -63,6 +64,24 @@
             border-radius: 50%;
             color: white;
         }
+        .heroBack{
+            display: none;
+            position: absolute;
+            letter-spacing: -9px;
+            width: 100%;
+            font-weight: 900;
+            color: #878a8f;
+            text-shadow: 6px 6px 50px #b6b5b5;
+            opacity: 0.2;
+            top: 100px;
+        }
+        marquee{
+            height: 100vh;
+        }
+        .heroBack h1{
+            font-size: 30vh;
+            line-height: 270px;
+        }
         .backgroundArticle{
             background-color: white;
         }
@@ -83,6 +102,16 @@
 
         .typing-container h2 {
             font-weight: 1000;
+        }
+
+        .Caru{
+            margin-top: 0%;
+        }
+        .svgBot{
+            margin-top: -10%;
+        }
+        .svgTop{
+            margin-bottom: -1%;
         }
 
         footer{
@@ -477,7 +506,12 @@
                 margin-bottom: 0%;
                 margin-left: 100px;
             }
-            
+            .Caru{
+                margin-top: -22%;
+            }
+            .heroBack{
+                display: block;
+            }
 
             
         }
