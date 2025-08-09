@@ -104,6 +104,10 @@
             font-weight: 1000;
         }
 
+        .hireMe{
+            margin-top: -3%
+        }
+        
         .Caru{
             margin-top: 0%;
             pointer-events: none;
