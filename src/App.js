@@ -85,7 +85,7 @@ function App() {
                           </div>
                           <h5>Meet Alex Pacaldo, a 22-year-old web developer.</h5>
                           <br></br>
-                          <a className="btn btn-dark" role="button" onClick={scrollToBottom}>HIRE ME!</a>
+                          <a className="hireMe btn btn-dark" role="button" onClick={scrollToBottom}>HIRE ME!</a>
                       </div>
                       <div><img src={ME} className="articlePic" data-aos= "fade-left"></img></div>
                   </div>
