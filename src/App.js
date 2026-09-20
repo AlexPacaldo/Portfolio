@@ -6,7 +6,7 @@ import LOGO from '../src/img/home/LOGO.jpg';
 import ME from '../src/img/about/me2.png';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
-import { useEffect, lazy, Suspense } from 'react';
+import { useEffect, lazy, Suspense, useState } from 'react';
 import AranW from '../src/img/works/aranDesk.png';
 import RektaW from '../src/img/works/Rekta Sikad.png';
 import BookW from '../src/img/works/BookWorm.png';
@@ -29,30 +29,46 @@ function App() {
     });
   };
 
+  const [formStatus, setFormStatus] = useState('idle');
+  const [formError, setFormError] = useState('');
+
   const onSubmit = async (event) => {
     event.preventDefault();
+    setFormStatus('sending');
+    setFormError('');
+
     const formData = new FormData(event.target);
+    const payload = {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      message: formData.get('message')
+    };
 
-    formData.append("access_key", "8a0fae47-b4cc-4b62-af81-ba7a62afaec0");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(payload)
+      });
 
-    const object = Object.fromEntries(formData);
-    const json = JSON.stringify(object);
+      const data = await res.json();
 
-    const res = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json"
-      },
-      body: json
-    }).then((res) => res.json());
+      if (!data.success) {
+        throw new Error(data.message || "Something went wrong. Please try again.");
+      }
 
-    if (res.success) {
+      event.target.reset();
+      setFormStatus('idle');
       Swal.fire({
-        title: "Thank You for Reaching Out!",
-        text: "Your message has been successfully sent. I will get back to you as soon as possible.",
+        title: "Message Sent!",
+        text: "Thanks for reaching out. I'll get back to you as soon as possible.",
         icon: "success"
       });
+    } catch (err) {
+      setFormError(err.message || "Something went wrong. Please try again.");
+      setFormStatus('error');
     }
   };
 
@@ -302,57 +318,67 @@ function App() {
 
               <div className='Contacts' data-aos="zoom-in">
                 <div className="ContactCont">
-                  <div className='CC1'>
+                  <div className="contactHead">
                     <h1><b>Contact Me</b></h1>
-                    <h3>Get in touch with me:</h3>
+                    <p className="contactSub">Have a project in mind or an opportunity to discuss? I'm currently open to full-time, part-time, and remote Full-Stack Developer roles — I usually respond within 24 hours.</p>
                   </div>
-                  <div className="py-5 px-md-3 contactMe">
-                    <div className="formm">
-                      <form onSubmit={onSubmit}>
-                      
-                        <label for="name">Name</label>
-                        <input className="form-control" type="text" name="name" required ></input><br></br>
+                  <div className="contactGrid">
 
-                        <label for="email"> Your Email</label>
-                        <input className="form-control" type="email" name="email" required></input><br></br>
+                    <div className="contactInfo">
+                      <a className="infoCard" href="mailto:alexpacaldo1105@gmail.com">
+                        <span className="infoIcon"><i className="bi bi-envelope-fill"></i></span>
+                        <span className="infoBody">
+                          <span className="infoLabel">Email</span>
+                          <span className="infoValue">alexpacaldo1105@gmail.com</span>
+                        </span>
+                      </a>
+                      <a className="infoCard" href="https://www.linkedin.com/in/alex-pacaldo-00046a269/">
+                        <span className="infoIcon"><i className="bi bi-linkedin"></i></span>
+                        <span className="infoBody">
+                          <span className="infoLabel">LinkedIn</span>
+                          <span className="infoValue">Alex Pacaldo</span>
+                        </span>
+                      </a>
+                      <a className="infoCard" href="https://github.com/AlexPacaldo">
+                        <span className="infoIcon"><i className="bi bi-github"></i></span>
+                        <span className="infoBody">
+                          <span className="infoLabel">GitHub</span>
+                          <span className="infoValue">@AlexPacaldo</span>
+                        </span>
+                      </a>
+                      <div className="infoNote">
+                        <p>
+                          Thanks for stopping by — you've made a great decision! Whether it's a question,
+                          a collaboration, or just to say hi, your message goes straight to my inbox.
+                        </p>
+                        <p>Alex Pacaldo — Full-Stack Developer</p>
+                      </div>
+                    </div>
 
-                        <label for="message">Message</label>
-                        <textarea className="form-control" name="message" id="" rows="3" required></textarea>
-                        <br></br>
-
-                        <button type="submit" class="btn btn-dark">Submit</button>
+                    <div className="formCard">
+                      <form className="contactForm" onSubmit={onSubmit} noValidate>
+                        <div className="field">
+                          <label htmlFor="name">Your Name</label>
+                          <input className="form-control" id="name" type="text" name="name" placeholder="John Doe" maxLength="100" required />
+                        </div>
+                        <div className="field">
+                          <label htmlFor="email">Your Email</label>
+                          <input className="form-control" id="email" type="email" name="email" placeholder="john@example.com" required />
+                        </div>
+                        <div className="field">
+                          <label htmlFor="message">Message</label>
+                          <textarea className="form-control" id="message" name="message" rows="5" maxLength="5000" placeholder="How can I help you?" required />
+                        </div>
+                        <button type="submit" className="btn submitBtn" disabled={formStatus === 'sending'}>
+                          {formStatus === 'sending' ? 'Sending...' : 'Send Message'}
+                        </button>
+                        {formStatus === 'error' && (
+                          <p className="formStatus error" role="alert">{formError}</p>
+                        )}
                       </form>
-
-
-                    </div>
-                    <div className="formm2">
-                      <a href="mailto:alexpacaldo1105@gmail.com?subject = Feedback&body = Message">
-                        <i className="bi bi-envelope-fill mx-2"></i>
-                        alexpacaldo1105@gmail.com
-                      </a>
-                      <br></br><br></br>
-                      <a href="https://www.linkedin.com/in/alex-pacaldo-00046a269/">
-                        <i className="bi bi-linkedin mx-2"></i>
-                        Alex Pacaldo
-                      </a>
-                      <br></br><br></br>
-                      <a href="https://github.com/AlexPacaldo">
-                        <i className="bi bi-github mx-2"></i>
-                        AlexPacaldo
-                      </a>
-                      <br></br><br></br>
                     </div>
 
-
-                    <br></br>
                   </div>
-                  <p className='ContMess'>
-                    Thank you for visiting this page for my contact information you made a great decision!
-                    I am accepting offers for full-time/part-time remote positions as a Full-Stack Developer.
-                    Contact me if you are interested!
-                  </p>
-                  <p>Thank you!</p>
-                  <p><b>Alex Pacaldo</b> - Full-Stack Developer</p>
                 </div>
               </div>
 
