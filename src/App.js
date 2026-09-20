@@ -381,8 +381,9 @@ function App() {
                       </a>
                       <div className="infoNote">
                         <p>
-                          Thanks for stopping by — you've made a great decision! Whether it's a question,
-                          a collaboration, or just to say hi, your message goes straight to my inbox.
+                          Thanks for stopping by. Whether you have a question, a project in mind,
+                          or just want to say hi — drop a message and it goes straight to my inbox.
+                          I try to reply within 24 hours.
                         </p>
                         <p>Alex Pacaldo — Full-Stack Developer</p>
                       </div>
