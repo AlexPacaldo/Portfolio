@@ -140,7 +140,8 @@
         }
 
         .hireMe{
-            margin-top: -3%
+            margin-top: -3%;
+            corner-shape: squircle();
         }
         
         .Caru{
@@ -227,6 +228,7 @@
             background: rgb(0, 0, 0);
             opacity: 0.8;
             border-radius: 10%;
+            corner-shape: squircle();
         }
 
         .articleCont {
@@ -245,6 +247,7 @@
             font-size: 16px;
             border: 3px solid #ccc;
             border-radius: 1rem;
+            corner-shape: squircle();
             line-height: 1.7;
             position: relative;
             height: auto;
@@ -278,6 +281,7 @@
 
         .skills-grid {
             border-radius: 1rem;
+            corner-shape: squircle();
             padding: 2rem;
             display: grid;
             gap: 15px;
@@ -289,6 +293,7 @@
         .skill-item {
             background-color: #f7f7f7;
             border-radius: 8px;
+            corner-shape: squircle();
             padding: 12px 10px;
             font-size: 15px;
             font-weight: 500;
@@ -329,6 +334,7 @@
 
         .AboutDesc{
             border-radius: 1rem;
+            corner-shape: squircle();
             padding: 2rem;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
             overflow: hidden;
@@ -338,6 +344,7 @@
 
         .timeLcont{
             border-radius: 1rem;
+            corner-shape: squircle();
             padding: 60px;
             grid-area: auto;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
@@ -363,6 +370,7 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
             overflow: hidden;
             border-radius: 1rem;
+            corner-shape: squircle();
         }
         .hover01 figure img {
             opacity: 1;
@@ -392,6 +400,7 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
             overflow: hidden;
             border-radius: 1rem;
+            corner-shape: squircle();
             padding: 50px;
         }
         .CC1{
@@ -476,6 +485,7 @@
             
             .AboutDesc{
                 border-radius: 1rem;
+                corner-shape: squircle();
                 padding: 2rem;
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
