@@ -85,15 +85,25 @@
         .backgroundArticle{
             background-color: white;
         }
-        .articlePic{
-            border-radius: 50%;
-            border: 5px solid rgba(255, 255, 255, 0);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.50);
-            overflow: hidden;
-            width: 90%;
-            margin-left: 6%;
-            margin-top: 10%;
-            margin-bottom: 10%;
+        .articleImgWrap{
+            position: relative;
+            width: 88%;
+            max-width: 640px;
+            height: 340px;
+            margin: 10% auto 12% auto;
+        }
+        .articleImgWrap .lanyard-wrapper{
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 100vw;
+            height: 100%;
+            transform: translateX(-50%);
+            z-index: 0;
+        }
+        .article1 > div:first-child{
+            position: relative;
+            z-index: 1;
         }
         
         .typing-container{
@@ -406,9 +416,14 @@
                 height:5vh;
             }
 
-            .articlePic{
-                width: auto;
-                margin-left: -50%;
+            .articleImgWrap{
+                width: 480px;
+                max-width: 92%;
+                height: 60vh;
+                margin: 0;
+            }
+            .articleImgWrap .lanyard-wrapper{
+                height: 100%;
             }
 
             .grid1about{
@@ -455,10 +470,6 @@
                 margin-top: 6%;
             }
 
-            .articlePic{ 
-                height:60vh;
-                margin-left: 0px;
-            }
             .typing-container{
             margin-top:0;
             }
@@ -508,11 +519,22 @@
                 flex-direction: row;
                 margin-top: 0;
             }
-            .articlePic{
-                width: auto;
+            .articleImgWrap{
+                width: 480px;
+                max-width: none;
+                height: 64vh;
+                min-height: 460px;
+                max-height: 640px;
                 margin-top: 0%;
                 margin-bottom: 0%;
                 margin-left: 100px;
+                margin-right: 20px;
+                flex-shrink: 0;
+            }
+            .articleImgWrap .lanyard-wrapper{
+                height: 64vh;
+                min-height: 460px;
+                max-height: 640px;
             }
             .Caru{
                 margin-top: -22%;

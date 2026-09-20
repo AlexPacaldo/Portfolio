@@ -12,6 +12,8 @@ import RektaW from '../src/img/works/Rekta Sikad.png';
 import BookW from '../src/img/works/BookWorm.png';
 import UcookW from '../src/img/works/uCookDesk.png';
 import Swal from 'sweetalert2';
+import Lanyard from './components/Lanyard';
+import FoldText from './components/FoldText';
 
 function App() {
 
@@ -80,14 +82,45 @@ function App() {
                   <div className="container-fluid article1">
                       <div className="text-center py-1 py-md-1" data-aos="fade-up">
                           <div className="typing-container">
-                              <h2 className="display-6 text-dark">HAVE AN IDEA IN MIND?</h2>
-                              <h2 className="display-6 text-dark">LET'S MAKE IT HAPPEN!</h2>
+                              <div>
+                                <FoldText
+                                  text="HAVE AN IDEA IN MIND?"
+                                  splitBy="char"
+                                  hinge="top"
+                                  trigger="mount"
+                                  duration={1}
+                                  stagger={0.05}
+                                  ease="power3.out"
+                                  creaseShading={0}
+                                  fontSize="clamp(2.2rem, 6.5vw, 3.6rem)"
+                                  fontWeight={900}
+                                  color="#212529"
+                                />
+                              </div>
+                              <div>
+                                <FoldText
+                                  text="LET'S MAKE IT HAPPEN!"
+                                  splitBy="char"
+                                  hinge="top"
+                                  trigger="mount"
+                                  duration={1}
+                                  stagger={0.05}
+                                  delay={2.1}
+                                  ease="power3.out"
+                                  creaseShading={0}
+                                  fontSize="clamp(2.2rem, 6.5vw, 3.6rem)"
+                                  fontWeight={900}
+                                  color="#212529"
+                                />
+                              </div>
                           </div>
                           <h5>Meet Alex Pacaldo, a 22-year-old web developer.</h5>
                           <br></br>
                           <a className="hireMe btn btn-dark" role="button" onClick={scrollToBottom}>HIRE ME!</a>
                       </div>
-                      <div><img src={ME} className="articlePic" data-aos= "fade-left"></img></div>
+                      <div className="articleImgWrap" data-aos="fade-left">
+                          <Lanyard frontImage={ME} position={[0, 0, 12]} />
+                      </div>
                   </div>
               </article>
 
