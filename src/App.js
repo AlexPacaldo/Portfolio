@@ -37,11 +37,20 @@ function App() {
     setFormStatus('sending');
     setFormError('');
 
+    const captchaToken = (window.turnstile && window.turnstile.getResponse()) || '';
+
+    if (!captchaToken) {
+      setFormError('Please complete the captcha check.');
+      setFormStatus('error');
+      return;
+    }
+
     const formData = new FormData(event.target);
     const payload = {
       name: formData.get('name'),
       email: formData.get('email'),
-      message: formData.get('message')
+      message: formData.get('message'),
+      captchaToken
     };
 
     try {
@@ -60,11 +69,13 @@ function App() {
       }
 
       event.target.reset();
+      if (window.turnstile) window.turnstile.reset();
       setFormStatus('idle');
       Swal.fire({
         title: "Message Sent!",
         text: "Thanks for reaching out. I'll get back to you as soon as possible.",
-        icon: "success"
+        icon: "success",
+        confirmButtonText: "Got it"
       });
     } catch (err) {
       setFormError(err.message || "Something went wrong. Please try again.");
@@ -368,6 +379,11 @@ function App() {
                         <div className="field">
                           <label htmlFor="message">Message</label>
                           <textarea className="form-control" id="message" name="message" rows="5" maxLength="5000" placeholder="How can I help you?" required />
+                        </div>
+                        <div className="field">
+                          {process.env.REACT_APP_TURNSTILE_SITE_KEY && (
+                            <div className="cf-turnstile turnstileWrap" data-sitekey={process.env.REACT_APP_TURNSTILE_SITE_KEY} data-theme="light" data-language="auto"></div>
+                          )}
                         </div>
                         <button type="submit" className="btn submitBtn" disabled={formStatus === 'sending'}>
                           {formStatus === 'sending' ? 'Sending...' : 'Send Message'}

@@ -451,7 +451,7 @@
         .infoCard:hover{
             transform: translateY(-3px);
             box-shadow: 0 12px 28px rgba(0, 0, 0, 0.10);
-            border-color: #d8d8f0;
+            border-color: #d4d4d4;
             text-decoration: none;
             color: #1f2937;
         }
@@ -462,8 +462,8 @@
             display: grid;
             place-items: center;
             background: #ffffff;
-            border: 1px solid #e6e6f2;
-            color: #4f46e5;
+            border: 1px solid #e5e7eb;
+            color: #111827;
             font-size: 1.2rem;
             border-radius: 12px;
             corner-shape: squircle();
@@ -537,14 +537,17 @@
             transition: border-color .2s ease, box-shadow .2s ease;
         }
         .contactForm .form-control:focus{
-            border-color: #6366f1;
-            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+            border-color: #111827;
+            box-shadow: 0 0 0 3px rgba(17, 24, 39, 0.12);
             outline: none;
             background: #ffffff;
         }
         .contactForm textarea.form-control{
             resize: vertical;
             min-height: 130px;
+        }
+        .turnstileWrap{
+            margin-top: 2px;
         }
         .ContactCont .submitBtn{
             align-self: flex-start;
@@ -708,4 +711,41 @@
             }
 
             
+        }
+
+        .swal2-popup{
+            border-radius: 24px;
+            corner-shape: squircle();
+            font-family: inherit;
+            padding: 2rem 1.5rem;
+        }
+        .swal2-title{
+            color: #111827;
+            font-weight: 800;
+            letter-spacing: -0.01em;
+        }
+        .swal2-html-container{
+            color: #6b7280;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .swal2-confirm{
+            background: #111827 !important;
+            border-radius: 12px !important;
+            corner-shape: squircle();
+            font-weight: 700;
+            letter-spacing: 0.01em;
+            box-shadow: 0 8px 20px rgba(17, 24, 39, 0.25);
+            transition: transform .2s ease, box-shadow .2s ease;
+        }
+        .swal2-confirm:hover{
+            box-shadow: 0 10px 24px rgba(17, 24, 39, 0.3);
+            transform: translateY(-1px);
+        }
+        .swal2-success-ring{
+            border-color: #111827 !important;
+        }
+        .swal2-success-line-tip,
+        .swal2-success-line-long{
+            background-color: #111827 !important;
         }
