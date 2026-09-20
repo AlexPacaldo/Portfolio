@@ -75,8 +75,19 @@
             opacity: 0.2;
             top: 100px;
         }
-        marquee{
+        .heroMarquee{
             height: 100vh;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .heroMarqueeInner{
+            display: inline-block;
+            white-space: nowrap;
+            animation: heroMarqueeScroll 8s linear infinite;
+        }
+        @keyframes heroMarqueeScroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
         }
         .heroBack h1{
             font-size: 30vh;
@@ -100,6 +111,20 @@
             height: 100%;
             transform: translateX(-50%);
             z-index: 0;
+        }
+        .articleImgWrap .lanyard-fallback{
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: radial-gradient(circle at 50% 35%, #d9d9d9, #efefef 60%, #ffffff);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-weight: 600;
+        }
+        .articleImgWrap .lanyard-fallback::after{
+            content: 'Loading...';
         }
         .article1 > div:first-child{
             position: relative;

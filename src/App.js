@@ -6,14 +6,15 @@ import LOGO from '../src/img/home/LOGO.jpg';
 import ME from '../src/img/about/me2.png';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
-import { useEffect } from 'react';
+import { useEffect, lazy, Suspense } from 'react';
 import AranW from '../src/img/works/aranDesk.png';
 import RektaW from '../src/img/works/Rekta Sikad.png';
 import BookW from '../src/img/works/BookWorm.png';
 import UcookW from '../src/img/works/uCookDesk.png';
 import Swal from 'sweetalert2';
-import Lanyard from './components/Lanyard';
 import FoldText from './components/FoldText';
+
+const Lanyard = lazy(() => import('./components/Lanyard'));
 
 function App() {
 
@@ -60,7 +61,7 @@ function App() {
       <div className="container1">
           <nav className="navbar navbar-expand-md navbar-light " data-aos="fade-down">
               <div className="navName">
-                  <img src={LOGO}></img>
+                  <img src={LOGO} alt="Alex Pacaldo logo"></img>
               </div>
               
               <div className="collapse navbar-collapse justify-content-center" id="navbar_collapse">
@@ -74,10 +75,13 @@ function App() {
           </nav>
           <main>
               <div className="heroBack">
-                <marquee width="100%" direction="left" scrollamount="20">
-                  <h1><b>Turning Ideas into Reality</b></h1>
-                </marquee>
-              </div>
+                  <div className="heroMarquee">
+                    <div className="heroMarqueeInner">
+                      <h1><b>Turning Ideas into Reality</b></h1>
+                      <h1><b>Turning Ideas into Reality</b></h1>
+                    </div>
+                  </div>
+                </div>
               <article className="backgroundArticle">
                   <div className="container-fluid article1">
                       <div className="text-center py-1 py-md-1" data-aos="fade-up">
@@ -116,10 +120,12 @@ function App() {
                           </div>
                           <h5>Meet Alex Pacaldo, a 22-year-old web developer.</h5>
                           <br></br>
-                          <a className="hireMe btn btn-dark" role="button" onClick={scrollToBottom}>HIRE ME!</a>
+                          <button type="button" className="hireMe btn btn-dark" onClick={scrollToBottom}>HIRE ME!</button>
                       </div>
                       <div className="articleImgWrap" data-aos="fade-left">
-                          <Lanyard frontImage={ME} position={[0, 0, 12]} />
+                          <Suspense fallback={<div className="lanyard-fallback" />}>
+                              <Lanyard frontImage={ME} position={[0, 0, 12]} />
+                          </Suspense>
                       </div>
                   </div>
               </article>
@@ -234,7 +240,7 @@ function App() {
                       <div className="hover01 column">
                         <div>
                           <a href="https://alexpacaldo.github.io/ExamItem2/">
-                            <figure><img src={BookW} width="100%" className="gridCont"></img></figure>
+                            <figure><img src={BookW} width="100%" className="gridCont" alt="BookWorm project preview"></img></figure>
                           </a>
                           <h5 className="text-center">BookWorm</h5>
                           <p className="text-center">HTML, CSS, Bootstrap</p>
@@ -246,7 +252,7 @@ function App() {
                       <div className="hover01 column">
                         <div>
                           <a href="https://alexpacaldo.github.io/MiniProject1/">
-                            <figure><img src={RektaW} width="100%" className="gridCont"></img></figure>
+                            <figure><img src={RektaW} width="100%" className="gridCont" alt="Rekta Sikad project preview"></img></figure>
                           </a>
                           <h5 className="text-center">Rekta Sikad</h5>
                           <p className="text-center">HTML, CSS, Bootstrap</p>
@@ -258,7 +264,7 @@ function App() {
                       <div className="hover01 column">
                         <div>
                           <a href="https://alexpacaldo.github.io/MiniProject2/">
-                            <figure><img src={AranW} width="100%" className="gridCont"></img></figure>
+                            <figure><img src={AranW} width="100%" className="gridCont" alt="Araña project preview"></img></figure>
                           </a>
                           <h5 className="text-center">Araña</h5>
                           <p className="text-center">ReactJs, CSS, BootStrap, JavaScript</p>
@@ -270,7 +276,7 @@ function App() {
                       <div className="hover01 column">
                         <div>
                           <a href="https://capstone-kodego-m39pjmzzk-wadze213.vercel.app/?fbclid=IwAR34eXrT2dAKNIsC_DqIwYDp3iyCI7RJBuplSVH8wbRgmRpp1HhZchpA1YE%5C">
-                            <figure><img src={UcookW} width="100%" className="gridCont"></img></figure>
+                            <figure><img src={UcookW} width="100%" className="gridCont" alt="U Cookin project preview"></img></figure>
                           </a>
                           <h5 className="text-center">U Cookin</h5>
                           <p className="text-center">ReactJs, NodeJS, MySQL</p>
