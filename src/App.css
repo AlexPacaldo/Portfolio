@@ -160,11 +160,11 @@
             overflow: hidden;
         }
         .svgTop .svgWave, .svgBot .svgWave{
-            animation: svgWaveFlow 12s linear infinite;
+            animation: svgWaveFlow 20s linear infinite;
         }
         @keyframes svgWaveFlow{
             0% { transform: translateX(0); }
-            100% { transform: translateX(-1440px); }
+            100% { transform: translateX(-2880px); }
         }
 
         footer{
