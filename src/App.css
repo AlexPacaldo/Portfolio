@@ -86,8 +86,8 @@
             animation: heroMarqueeScroll 8s linear infinite;
         }
         @keyframes heroMarqueeScroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
+            0% { transform: translateX(100vw); }
+            100% { transform: translateX(-100%); }
         }
         .heroBack h1{
             font-size: 30vh;

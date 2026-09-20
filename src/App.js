@@ -78,7 +78,6 @@ function App() {
                   <div className="heroMarquee">
                     <div className="heroMarqueeInner">
                       <h1><b>Turning Ideas into Reality</b></h1>
-                      <h1><b>Turning Ideas into Reality</b></h1>
                     </div>
                   </div>
                 </div>
