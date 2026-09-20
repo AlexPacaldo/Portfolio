@@ -33,6 +33,7 @@ export default async function handler(req, res) {
     const verify = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      signal: AbortSignal.timeout(10000),
       body: new URLSearchParams({ secret: secretKey, response: captchaToken, remoteip: ip }),
     }).then((r) => r.json());
 
@@ -61,6 +62,7 @@ export default async function handler(req, res) {
         Authorization: `Bearer ${apiKey}`,
         'Content-Type': 'application/json',
       },
+      signal: AbortSignal.timeout(15000),
       body: JSON.stringify({
         from: `Portfolio Contact <${from}>`,
         to: [to],

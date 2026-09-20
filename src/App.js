@@ -54,15 +54,20 @@ function App() {
     };
 
     try {
+      const controller = new AbortController();
+      const timer = setTimeout(() => controller.abort(), 30000);
+
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
         },
+        signal: controller.signal,
         body: JSON.stringify(payload)
       });
 
       const data = await res.json();
+      clearTimeout(timer);
 
       if (!data.success) {
         throw new Error(data.message || "Something went wrong. Please try again.");
