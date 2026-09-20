@@ -156,6 +156,16 @@
         .svgTop{
             margin-bottom: -1%;
         }
+        .svgTop, .svgBot{
+            overflow: hidden;
+        }
+        .svgTop .svgWave, .svgBot .svgWave{
+            animation: svgWaveFlow 12s linear infinite;
+        }
+        @keyframes svgWaveFlow{
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-1440px); }
+        }
 
         footer{
             display: flex;
