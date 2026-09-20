@@ -83,7 +83,7 @@
         .heroMarqueeInner{
             display: inline-block;
             white-space: nowrap;
-            animation: heroMarqueeScroll 20s linear infinite;
+            animation: heroMarqueeScroll 15s linear infinite;
         }
         @keyframes heroMarqueeScroll {
             0% { transform: translateX(100vw); }
