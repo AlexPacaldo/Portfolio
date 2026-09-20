@@ -6,7 +6,7 @@ import LOGO from '../src/img/home/LOGO.jpg';
 import ME from '../src/img/about/me2.png';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
-import { useEffect, lazy, Suspense, useState } from 'react';
+import { useEffect, lazy, Suspense, useRef, useState } from 'react';
 import AranW from '../src/img/works/aranDesk.png';
 import RektaW from '../src/img/works/Rekta Sikad.png';
 import BookW from '../src/img/works/BookWorm.png';
@@ -31,13 +31,30 @@ function App() {
 
   const [formStatus, setFormStatus] = useState('idle');
   const [formError, setFormError] = useState('');
+  const turnstileRef = useRef(null);
+
+  useEffect(() => {
+    const siteKey = process.env.REACT_APP_TURNSTILE_SITE_KEY;
+    if (!siteKey) return;
+    const widget = document.querySelector('.cf-turnstile');
+    const timer = setInterval(() => {
+      if (!window.turnstile || turnstileRef.current || !widget) return;
+      turnstileRef.current = window.turnstile.render(widget, {
+        sitekey: siteKey,
+        theme: 'light',
+        language: 'auto'
+      });
+      clearInterval(timer);
+    }, 200);
+    return () => clearInterval(timer);
+  }, []);
 
   const onSubmit = async (event) => {
     event.preventDefault();
     setFormStatus('sending');
     setFormError('');
 
-    const captchaToken = (window.turnstile && window.turnstile.getResponse()) || '';
+    const captchaToken = (window.turnstile && window.turnstile.getResponse(turnstileRef.current)) || '';
 
     if (!captchaToken) {
       setFormError('Please complete the captcha check.');
@@ -74,7 +91,7 @@ function App() {
       }
 
       event.target.reset();
-      if (window.turnstile) window.turnstile.reset();
+      if (window.turnstile) window.turnstile.reset(turnstileRef.current);
       setFormStatus('idle');
       Swal.fire({
         title: "Message Sent!",
