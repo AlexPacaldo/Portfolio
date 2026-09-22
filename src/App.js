@@ -1,7 +1,7 @@
 import './App.css';
-import lapPhonearan from '../src/img/home/lapPhonearan.png';
-import LapRekta from '../src/img/home/lapPhonerekta.png';
-import LapUcook from '../src/img/home/lapPhoneuCook.png';
+import Hachi from '../src/img/home/Recent Projects/Hachi.png';
+import Jen from '../src/img/home/Recent Projects/Jen.png';
+import SideEye from '../src/img/home/Recent Projects/SideEye.png';
 import LOGO from '../src/img/home/LOGO.jpg';
 import ME from '../src/img/about/me2.png';
 import Aos from 'aos';
@@ -192,9 +192,9 @@ function App() {
                 <div className="recentProjCarousel">
                   <DepthCarousel
                     items={[
-                      { image: lapPhonearan, alt: 'Araña' },
-                      { image: LapRekta, alt: 'Rekta Sikad' },
-                      { image: LapUcook, alt: 'U Cookin' }
+                      { image: Hachi, alt: 'Hachi' },
+                      { image: Jen, alt: 'Jen' },
+                      { image: SideEye, alt: 'Side Eye' }
                     ]}
                     depth={220}
                     spread={90}
@@ -205,7 +205,7 @@ function App() {
                     falloff={0.2}
                     blur={6}
                     cardWidth={560}
-                    cardHeight={210}
+                    cardHeight={276}
                     autoplay
                     loop
                   />
