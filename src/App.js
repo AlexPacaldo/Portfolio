@@ -196,7 +196,7 @@ function App() {
                       { image: Jen, alt: 'Jen' },
                       { image: SideEye, alt: 'Side Eye' }
                     ]}
-                    depth={180}
+                    depth={300}
                     spread={380}
                     tilt={22}
                     tiltDirection="right"
