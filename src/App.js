@@ -13,6 +13,7 @@ import BookW from '../src/img/works/BookWorm.png';
 import UcookW from '../src/img/works/uCookDesk.png';
 import Swal from 'sweetalert2';
 import FoldText from './components/FoldText';
+import DepthCarousel from './components/DepthCarousel';
 
 const Lanyard = lazy(() => import('./components/Lanyard'));
 
@@ -188,31 +189,24 @@ function App() {
                   </g>
                 </svg>
                 <h1 className="RecentProj"><i>Recent Projects</i></h1>
-                <div id="carouselExampleCaptions" className="carousel slide" data-bs-ride="false">
-                    {/* <div className="carousel-indicators">
-                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
-                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                    </div> */}
-                    <div className="carousel-inner">
-                      <div className="carousel-item active">
-                        <img src={lapPhonearan} className="d-block w-100" alt="..."></img>
-                      </div>
-                      <div className="carousel-item">
-                        <img src={LapRekta} className="d-block w-100" alt="..."></img>
-                      </div>
-                      <div className="carousel-item">
-                        <img src={LapUcook} className="d-block w-100" alt="..."></img>
-                      </div>
-                    </div>
-                    <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                      <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span className="visually-hidden">Previous</span>
-                    </button>
-                    <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                      <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span className="visually-hidden">Next</span>
-                    </button>
+                <div className="recentProjCarousel">
+                  <DepthCarousel
+                    items={[
+                      { image: lapPhonearan, alt: 'Araña' },
+                      { image: LapRekta, alt: 'Rekta Sikad' },
+                      { image: LapUcook, alt: 'U Cookin' }
+                    ]}
+                    depth={220}
+                    spread={90}
+                    tilt={22}
+                    tiltDirection="right"
+                    perspective={1400}
+                    visibleCards={4}
+                    falloff={0.2}
+                    blur={6}
+                    autoplay
+                    loop
+                  />
                 </div>
                 <svg className='svgBot' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
                   <g className="svgWave">

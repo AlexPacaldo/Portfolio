@@ -148,8 +148,21 @@
             margin-top: 0%;
             pointer-events: none;
         }
-        .carousel-indicators,.carousel-control-prev,.carousel-control-next{
+        .recentProjCarousel{
             pointer-events: auto;
+            position: relative;
+            height: 500px;
+            background-color: #000;
+        }
+        @media (min-width: 1177px) {
+            .recentProjCarousel{
+                height: 520px;
+            }
+        }
+        @media (max-width: 767px) {
+            .recentProjCarousel{
+                height: 380px;
+            }
         }
         .svgBot{
             margin-top: -10%;
