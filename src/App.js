@@ -196,16 +196,16 @@ function App() {
                       { image: Jen, alt: 'Jen' },
                       { image: SideEye, alt: 'Side Eye' }
                     ]}
-                    depth={220}
-                    spread={90}
+                    depth={180}
+                    spread={260}
                     tilt={22}
                     tiltDirection="right"
                     perspective={1400}
                     visibleCards={4}
                     falloff={0.2}
                     blur={6}
-                    cardWidth={560}
-                    cardHeight={276}
+                    cardWidth={720}
+                    cardHeight={354}
                     autoplay
                     loop
                   />
