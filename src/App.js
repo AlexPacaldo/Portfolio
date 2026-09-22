@@ -204,6 +204,8 @@ function App() {
                     visibleCards={4}
                     falloff={0.2}
                     blur={6}
+                    cardWidth={560}
+                    cardHeight={210}
                     autoplay
                     loop
                   />
