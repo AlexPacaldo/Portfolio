@@ -156,12 +156,12 @@
         }
         @media (min-width: 1177px) {
             .recentProjCarousel{
-                height: 580px;
+                height: 700px;
             }
         }
         @media (max-width: 767px) {
             .recentProjCarousel{
-                height: 400px;
+                height: 480px;
             }
         }
         .svgBot{
