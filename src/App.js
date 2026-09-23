@@ -352,9 +352,14 @@ function App() {
                 <div className='ProjCont'>
                   <div data-aos="zoom-in">
                     <h1 className="text-center"><b>My Projects</b></h1>
-                    <p className="text-center">Projects that i made in 2022</p>
+                    <p className="text-center">Projects that i made — from bootcamp to now</p>
                   </div>
-                  <div className="row row-cols-1 row-cols-md-2 gx-3 gy-3">
+                  <div className="projectGroup">
+                    <div className="projectGroupHead">
+                      <span className="sectionTag">2022 · Bootcamp &amp; School</span>
+                      <p className="projectGroupSub">My early projects from bootcamp and school.</p>
+                    </div>
+                    <div className="row row-cols-1 row-cols-md-2 gx-3 gy-3">
 
                     <div className="col" data-aos="fade-right">
                       <div className="projectCard">
@@ -452,6 +457,88 @@ function App() {
                       </div>
                     </div>
 
+                  </div>
+                  </div>
+
+                  <div className="projectGroup">
+                    <div className="projectGroupHead">
+                      <span className="sectionTag">2026 · Latest Builds</span>
+                      <p className="projectGroupSub">My more recent projects from this year.</p>
+                    </div>
+                    <div className="row row-cols-1 row-cols-md-2 gx-3 gy-3">
+
+                      <div className="col" data-aos="fade-right">
+                        <div className="projectCard">
+                          <FlipCard
+                            front={<img src={SideEye} alt="Side Eye project preview" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />}
+                            back={
+                              <div className="flipCardBack">
+                                <span className="flipCardTag">Side Eye</span>
+                                <span className="flipCardStack">TypeScript · HTML · CSS</span>
+                                <p className="flipCardDesc">An interactive web game built with TypeScript, HTML, and CSS, deployed on Vercel.</p>
+                                <a className="flipCardLink" href="https://sideeye-game.vercel.app/" target="_blank" rel="noreferrer">Visit Site <i className="bi bi-arrow-right"></i></a>
+                              </div>
+                            }
+                            width={cardWidth}
+                            height={cardHeight(945 / 1920)}
+                            radius={18}
+                            background="linear-gradient(135deg, #000000 0%, #111827 100%)"
+                            color="#ffffff"
+                            shadowColor="#111827"
+                            glareOpacity={0.18}
+                            ariaLabel="Side Eye project card"
+                          />
+                        </div>
+                      </div>
+
+                      <div className="col" data-aos="fade-left">
+                        <div className="projectCard">
+                          <FlipCard
+                            front={<img src={Jen} alt="Jen Academia project preview" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />}
+                            back={
+                              <div className="flipCardBack">
+                                <span className="flipCardTag">Jen Academia</span>
+                                <span className="flipCardStack">JavaScript · HTML · CSS</span>
+                                <p className="flipCardDesc">An academic web application built for my STI thesis, deployed on Vercel.</p>
+                                <a className="flipCardLink" href="https://sti-thesis-jen-academia.vercel.app/" target="_blank" rel="noreferrer">Visit Site <i className="bi bi-arrow-right"></i></a>
+                              </div>
+                            }
+                            width={cardWidth}
+                            height={cardHeight(945 / 1920)}
+                            radius={18}
+                            background="linear-gradient(135deg, #000000 0%, #111827 100%)"
+                            color="#ffffff"
+                            shadowColor="#111827"
+                            glareOpacity={0.18}
+                            ariaLabel="Jen Academia project card"
+                          />
+                        </div>
+                      </div>
+
+                      <div className="col mx-auto" data-aos="fade-up">
+                        <div className="projectCard">
+                          <FlipCard
+                            front={<img src={Hachi} alt="Hachi project preview" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />}
+                            back={
+                              <div className="flipCardBack">
+                                <span className="flipCardTag">Hachi</span>
+                                <p className="flipCardDesc">A web application deployed on Vercel.</p>
+                                <a className="flipCardLink" href="https://hachi-review.vercel.app/" target="_blank" rel="noreferrer">Visit Site <i className="bi bi-arrow-right"></i></a>
+                              </div>
+                            }
+                            width={cardWidth}
+                            height={cardHeight(944 / 1906)}
+                            radius={18}
+                            background="linear-gradient(135deg, #000000 0%, #111827 100%)"
+                            color="#ffffff"
+                            shadowColor="#111827"
+                            glareOpacity={0.18}
+                            ariaLabel="Hachi project card"
+                          />
+                        </div>
+                      </div>
+
+                    </div>
                   </div>
                 </div>
               </div>
