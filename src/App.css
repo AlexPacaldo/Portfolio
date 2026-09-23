@@ -680,6 +680,32 @@
             font-size: 1.35rem;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
         }
+        .flipCardBack--book{ --glow: rgba(251, 191, 36, 0.42); --glow2: rgba(196, 181, 253, 0.28); }
+        .flipCardBack--bike{ --glow: rgba(52, 211, 153, 0.42); --glow2: rgba(186, 230, 253, 0.22); }
+        .flipCardBack--spider{ --glow: rgba(192, 132, 252, 0.42); --glow2: rgba(255, 255, 255, 0.12); }
+        .flipCardBack--cook{ --glow: rgba(253, 186, 116, 0.45); --glow2: rgba(254, 202, 202, 0.22); }
+        .flipCardNum{
+            position: absolute;
+            top: 14px;
+            left: 16px;
+            font-size: 2.2rem;
+            font-weight: 900;
+            line-height: 1;
+            letter-spacing: -0.02em;
+            color: rgba(255, 255, 255, 0.16);
+        }
+        .flipCardBadge{
+            width: 52px;
+            height: 52px;
+            border-radius: 14px;
+            display: grid;
+            place-items: center;
+            background: rgba(255, 255, 255, 0.16);
+            border: 1px solid rgba(255, 255, 255, 0.28);
+            color: #ffffff;
+            font-size: 1.35rem;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+        }
         .flipCardTag{
             font-size: 1.5rem;
             font-weight: 800;
