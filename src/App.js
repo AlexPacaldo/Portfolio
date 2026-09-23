@@ -352,12 +352,10 @@ function App() {
                 <div className='ProjCont'>
                   <div data-aos="zoom-in">
                     <h1 className="text-center"><b>My Projects</b></h1>
-                    <p className="text-center">Projects that i made — from bootcamp to now</p>
                   </div>
                   <div className="projectGroup">
                     <div className="projectGroupHead">
                       <span className="sectionTag">2026 · Latest Builds</span>
-                      <p className="projectGroupSub">My more recent projects from this year.</p>
                     </div>
                     <div className="row row-cols-1 row-cols-md-2 gx-3 gy-3">
 
@@ -437,8 +435,7 @@ function App() {
 
                   <div className="projectGroup">
                     <div className="projectGroupHead">
-                      <span className="sectionTag">2022 · Bootcamp &amp; School</span>
-                      <p className="projectGroupSub">My early projects from bootcamp and school.</p>
+                      <span className="sectionTag">2022 · Bootcamp</span>
                     </div>
                     <div className="row row-cols-1 row-cols-md-2 gx-3 gy-3">
 
