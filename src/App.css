@@ -386,27 +386,34 @@
         }
 
         .sectionTag{
-            display: flex;
+            display: inline-flex;
             align-items: center;
-            gap: 10px;
-            font-size: 0.72rem;
-            font-weight: 700;
+            gap: 8px;
+            font-size: 0.75rem;
+            font-weight: 800;
             letter-spacing: 0.14em;
             text-transform: uppercase;
-            color: #9ca3af;
+            color: #ffffff;
+            background: #111827;
+            padding: 7px 16px;
+            border-radius: 999px;
+            box-shadow: 0 4px 14px rgba(17, 24, 39, 0.25);
             margin-bottom: 18px;
         }
         .sectionTag::before{
             content: '';
-            width: 22px;
-            height: 2px;
-            background: #111827;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #6366f1;
         }
         .sectionTag--dark{
-            color: rgba(255, 255, 255, 0.55);
+            color: #111827;
+            background: #ffffff;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
         }
         .sectionTag--dark::before{
-            background: #ffffff;
+            background: #6366f1;
         }
 
         .grid1about{
