@@ -27,8 +27,7 @@ function useCardSize() {
     return () => window.removeEventListener('resize', onResize);
   }, []);
 
-  const width = Math.round(vw < 768 ? Math.min(vw * 0.88, 420) : Math.min((vw * 0.77 - 24) / 2, 560));
-  return { width, height: Math.round(width * 0.63) };
+  return Math.round(vw < 768 ? Math.max(vw - 16, 0) : Math.max((vw * 0.77 - 16) / 2, 0));
 }
 
 function App() {
@@ -37,7 +36,8 @@ function App() {
     Aos.init({duration: 3000});
   }, [])
 
-  const { width: cardWidth, height: cardHeight } = useCardSize();
+  const cardWidth = useCardSize();
+  const cardHeight = aspect => Math.round(cardWidth * aspect);
 
   const scrollToBottom = () => {
     window.scrollTo({
@@ -369,7 +369,7 @@ function App() {
                             </div>
                           }
                           width={cardWidth}
-                          height={cardHeight}
+                          height={cardHeight(957 / 1906)}
                           radius={18}
                           background="#ffffff"
                           color="#111827"
@@ -393,7 +393,7 @@ function App() {
                             </div>
                           }
                           width={cardWidth}
-                          height={cardHeight}
+                          height={cardHeight(1080 / 1920)}
                           radius={18}
                           background="#ffffff"
                           color="#111827"
@@ -417,7 +417,7 @@ function App() {
                             </div>
                           }
                           width={cardWidth}
-                          height={cardHeight}
+                          height={cardHeight(1080 / 1920)}
                           radius={18}
                           background="#ffffff"
                           color="#111827"
@@ -441,7 +441,7 @@ function App() {
                             </div>
                           }
                           width={cardWidth}
-                          height={cardHeight}
+                          height={cardHeight(1080 / 1920)}
                           radius={18}
                           background="#ffffff"
                           color="#111827"
