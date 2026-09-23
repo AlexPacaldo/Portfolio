@@ -255,60 +255,67 @@ function App() {
                     </div>
 
                     <aside className="aboutStats" data-aos="fade-left">
+                      <span className="aboutStatsGlow" aria-hidden="true"></span>
+                      <div className="aboutStatus"><span className="statusDot"></span>Open to Work</div>
                       <span className="sectionTag sectionTag--dark">Fast Facts</span>
                       <div className="factsList">
                         <div className="factRow">
-                          <span className="factLabel">Based in</span>
-                          <span className="factValue">Cainta, Rizal, Philippines</span>
+                          <span className="factIcon"><i className="bi bi-geo-alt"></i></span>
+                          <span className="factBody">
+                            <span className="factLabel">Based in</span>
+                            <span className="factValue">Cainta, Rizal, Philippines</span>
+                          </span>
                         </div>
                         <div className="factRow">
-                          <span className="factLabel">Age</span>
-                          <span className="factValue">22</span>
+                          <span className="factIcon"><i className="bi bi-person"></i></span>
+                          <span className="factBody">
+                            <span className="factLabel">Age</span>
+                            <span className="factValue">22</span>
+                          </span>
                         </div>
                         <div className="factRow">
-                          <span className="factLabel">Seeking</span>
-                          <span className="factValue">Full-Stack / Front-End roles</span>
+                          <span className="factIcon"><i className="bi bi-briefcase"></i></span>
+                          <span className="factBody">
+                            <span className="factLabel">Seeking</span>
+                            <span className="factValue factValue--accent">Full-Stack Developer roles</span>
+                          </span>
                         </div>
                         <div className="factRow">
-                          <span className="factLabel">Interests</span>
-                          <span className="factValue">Tech · Coding · Sports · Entertainment</span>
+                          <span className="factIcon"><i className="bi bi-stars"></i></span>
+                          <span className="factBody">
+                            <span className="factLabel">Interests</span>
+                            <span className="factValue">Tech · Coding · Sports · Entertainment</span>
+                          </span>
                         </div>
                       </div>
-                      <hr className="aboutDivider" />
-                      <span className="sectionTag sectionTag--dark">Education</span>
-                      <ul className="eduList">
-                        <li>BS Computer Science · STI College Ortigas-Cainta</li>
-                        <li>KodeGo Bootcamp · Full-Stack Web Development</li>
-                        <li>Senior High School · STEM strand</li>
-                      </ul>
                     </aside>
 
                     <div className="skillsSection" data-aos="fade-right">
                       <span className="sectionTag">Tech Stack</span>
                       <div className="skills-grid">
-                        <div className="skill-item">💻 GitHub</div>
-                        <div className="skill-item">🌐 HTML5</div>
-                        <div className="skill-item">🎨 CSS3</div>
-                        <div className="skill-item">📱 Responsive Design</div>
-                        <div className="skill-item">⚙️ JavaScript</div>
-                        <div className="skill-item">☕ Java</div>
-                        <div className="skill-item">🧩 Bootstrap</div>
-                        <div className="skill-item">⚛️ ReactJS</div>
-                        <div className="skill-item">🔗 Node.js</div>
-                        <div className="skill-item">🛢️ MySQL</div>
-                        <div className="skill-item">🔣 C#</div>
+                        <div className="skill-item" style={{ '--skill': '#181717' }}><span className="skillIcon"><i className="bi bi-github"></i></span><span>GitHub</span></div>
+                        <div className="skill-item" style={{ '--skill': '#e34f26' }}><span className="skillIcon"><i className="bi bi-filetype-html"></i></span><span>HTML5</span></div>
+                        <div className="skill-item" style={{ '--skill': '#1572b6' }}><span className="skillIcon"><i className="bi bi-filetype-css"></i></span><span>CSS3</span></div>
+                        <div className="skill-item" style={{ '--skill': '#10b981' }}><span className="skillIcon"><i className="bi bi-phone"></i></span><span>Responsive Design</span></div>
+                        <div className="skill-item" style={{ '--skill': '#eab308' }}><span className="skillIcon"><i className="bi bi-filetype-js"></i></span><span>JavaScript</span></div>
+                        <div className="skill-item" style={{ '--skill': '#f89820' }}><span className="skillIcon"><i className="bi bi-cup-hot"></i></span><span>Java</span></div>
+                        <div className="skill-item" style={{ '--skill': '#7952b3' }}><span className="skillIcon"><i className="bi bi-bootstrap"></i></span><span>Bootstrap</span></div>
+                        <div className="skill-item" style={{ '--skill': '#61dafb' }}><span className="skillIcon"><i className="bi bi-atom"></i></span><span>ReactJS</span></div>
+                        <div className="skill-item" style={{ '--skill': '#339933' }}><span className="skillIcon"><i className="bi bi-npm"></i></span><span>Node.js</span></div>
+                        <div className="skill-item" style={{ '--skill': '#00758f' }}><span className="skillIcon"><i className="bi bi-database"></i></span><span>MySQL</span></div>
+                        <div className="skill-item" style={{ '--skill': '#68217a' }}><span className="skillIcon"><i className="bi bi-code-slash"></i></span><span>C#</span></div>
                       </div>
                     </div>
 
-                    <div className='timeLcont' data-aos="fade-left">
-                      <span className="sectionTag">Education &amp; Experience</span>
+                    <div className='timeLcont'>
+                      <span className="sectionTag" data-aos="fade-right">Education &amp; Experience</span>
                       <div className="timeline">
-                        <div className="timeCont">
+                        <div className="timeCont" data-aos="fade-left" data-aos-delay="100">
                           <h5>August 2023 - Present</h5>
                           <h3><b>STI College Ortigas-Cainta</b></h3>
                           <h5>Bachelor of Science in Computer Science</h5>
                         </div>
-                        <div className="timeCont">
+                        <div className="timeCont" data-aos="fade-left" data-aos-delay="250">
                           <h5>August 2022 - December 2022</h5>
                           <h3><b>Kodego Bootcamp</b></h3>
                           <h5>
