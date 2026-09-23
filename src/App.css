@@ -628,47 +628,100 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            gap: 10px;
+            gap: 12px;
             padding: 24px;
             box-sizing: border-box;
+            overflow: hidden;
+        }
+        .flipCardBack::before,
+        .flipCardBack::after{
+            content: "";
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .flipCardBack::before{
+            width: 260px;
+            height: 260px;
+            top: -80px;
+            right: -80px;
+            background: radial-gradient(circle, var(--glow, rgba(255,255,255,0.3)), transparent 70%);
+        }
+        .flipCardBack::after{
+            width: 170px;
+            height: 170px;
+            bottom: -60px;
+            left: -60px;
+            background: radial-gradient(circle, var(--glow2, rgba(255,255,255,0.14)), transparent 70%);
+        }
+        .flipCardBack--book{ --glow: rgba(251, 191, 36, 0.42); --glow2: rgba(196, 181, 253, 0.28); }
+        .flipCardBack--bike{ --glow: rgba(52, 211, 153, 0.42); --glow2: rgba(186, 230, 253, 0.22); }
+        .flipCardBack--spider{ --glow: rgba(192, 132, 252, 0.42); --glow2: rgba(255, 255, 255, 0.12); }
+        .flipCardBack--cook{ --glow: rgba(253, 186, 116, 0.45); --glow2: rgba(254, 202, 202, 0.22); }
+        .flipCardNum{
+            position: absolute;
+            top: 14px;
+            left: 16px;
+            font-size: 2.2rem;
+            font-weight: 900;
+            line-height: 1;
+            letter-spacing: -0.02em;
+            color: rgba(255, 255, 255, 0.16);
+        }
+        .flipCardBadge{
+            width: 52px;
+            height: 52px;
+            border-radius: 14px;
+            display: grid;
+            place-items: center;
+            background: rgba(255, 255, 255, 0.16);
+            border: 1px solid rgba(255, 255, 255, 0.28);
+            color: #ffffff;
+            font-size: 1.35rem;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
         }
         .flipCardTag{
-            font-size: 1.35rem;
+            font-size: 1.5rem;
             font-weight: 800;
-            line-height: 1.2;
-            color: #111827;
+            line-height: 1.1;
+            color: #ffffff;
         }
         .flipCardStack{
-            font-size: 0.8rem;
-            font-weight: 600;
-            letter-spacing: 0.04em;
-            color: #6366f1;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
             text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.92);
+            background: rgba(255, 255, 255, 0.14);
+            border: 1px solid rgba(255, 255, 255, 0.22);
+            padding: 5px 14px;
+            border-radius: 999px;
         }
         .flipCardDesc{
             font-size: 0.95rem;
-            line-height: 1.5;
-            color: #4b5563;
+            line-height: 1.55;
+            color: rgba(255, 255, 255, 0.9);
             margin: 0;
             max-width: 90%;
         }
         .flipCardLink{
-            margin-top: 8px;
+            margin-top: 10px;
             display: inline-flex;
             align-items: center;
-            gap: 6px;
+            gap: 8px;
             font-size: 0.9rem;
-            font-weight: 700;
-            color: #ffffff;
-            background: #111827;
-            padding: 9px 20px;
+            font-weight: 800;
+            color: #111827;
+            background: #ffffff;
+            padding: 10px 22px;
             border-radius: 999px;
             text-decoration: none;
-            transition: background 0.25s ease, transform 0.25s ease;
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
         }
         .flipCardLink:hover{
-            background: #6366f1;
-            transform: translateY(-2px);
+            transform: translateY(-2px) scale(1.03);
+            box-shadow: 0 14px 30px rgba(0, 0, 0, 0.3);
         }
 .Contacts{
             display: flex;

@@ -361,18 +361,20 @@ function App() {
                         <FlipCard
                           front={<img src={BookW} alt="BookWorm project preview" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />}
                           back={
-                            <div className="flipCardBack">
+                            <div className="flipCardBack flipCardBack--book">
+                              <span className="flipCardNum">01</span>
+                              <span className="flipCardBadge"><i className="bi bi-book"></i></span>
                               <span className="flipCardTag">BookWorm</span>
-                              <span className="flipCardStack">HTML, CSS, Bootstrap</span>
+                              <span className="flipCardStack">HTML · CSS · Bootstrap</span>
                               <p className="flipCardDesc">A book-themed website built with HTML, CSS, and Bootstrap.</p>
-                              <a className="flipCardLink" href="https://alexpacaldo.github.io/ExamItem2/" target="_blank" rel="noreferrer">Visit Site <i className="bi bi-box-arrow-up-right"></i></a>
+                              <a className="flipCardLink" href="https://alexpacaldo.github.io/ExamItem2/" target="_blank" rel="noreferrer">Visit Site <i className="bi bi-arrow-right"></i></a>
                             </div>
                           }
                           width={cardWidth}
                           height={cardHeight(957 / 1906)}
                           radius={18}
-                          background="#ffffff"
-                          color="#111827"
+                          background="linear-gradient(135deg, #312e81 0%, #6d28d9 45%, #a21caf 100%)"
+                          color="#ffffff"
                           shadowColor="#111827"
                           glareOpacity={0.18}
                           ariaLabel="BookWorm project card"
@@ -385,18 +387,20 @@ function App() {
                         <FlipCard
                           front={<img src={RektaW} alt="Rekta Sikad project preview" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />}
                           back={
-                            <div className="flipCardBack">
+                            <div className="flipCardBack flipCardBack--bike">
+                              <span className="flipCardNum">02</span>
+                              <span className="flipCardBadge"><i className="bi bi-bicycle"></i></span>
                               <span className="flipCardTag">Rekta Sikad</span>
-                              <span className="flipCardStack">HTML, CSS, Bootstrap</span>
+                              <span className="flipCardStack">HTML · CSS · Bootstrap</span>
                               <p className="flipCardDesc">A bike-themed website built with HTML, CSS, and Bootstrap.</p>
-                              <a className="flipCardLink" href="https://alexpacaldo.github.io/MiniProject1/" target="_blank" rel="noreferrer">Visit Site <i className="bi bi-box-arrow-up-right"></i></a>
+                              <a className="flipCardLink" href="https://alexpacaldo.github.io/MiniProject1/" target="_blank" rel="noreferrer">Visit Site <i className="bi bi-arrow-right"></i></a>
                             </div>
                           }
                           width={cardWidth}
                           height={cardHeight(1080 / 1920)}
                           radius={18}
-                          background="#ffffff"
-                          color="#111827"
+                          background="linear-gradient(135deg, #064e3b 0%, #065f46 55%, #134e4a 100%)"
+                          color="#ffffff"
                           shadowColor="#111827"
                           glareOpacity={0.18}
                           ariaLabel="Rekta Sikad project card"
@@ -409,18 +413,20 @@ function App() {
                         <FlipCard
                           front={<img src={AranW} alt="Araña project preview" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />}
                           back={
-                            <div className="flipCardBack">
+                            <div className="flipCardBack flipCardBack--spider">
+                              <span className="flipCardNum">03</span>
+                              <span className="flipCardBadge"><i className="bi bi-bug"></i></span>
                               <span className="flipCardTag">Araña</span>
-                              <span className="flipCardStack">ReactJs, CSS, BootStrap, JavaScript</span>
+                              <span className="flipCardStack">ReactJs · CSS · BootStrap · JavaScript</span>
                               <p className="flipCardDesc">A React-powered website built with Bootstrap and JavaScript.</p>
-                              <a className="flipCardLink" href="https://alexpacaldo.github.io/MiniProject2/" target="_blank" rel="noreferrer">Visit Site <i className="bi bi-box-arrow-up-right"></i></a>
+                              <a className="flipCardLink" href="https://alexpacaldo.github.io/MiniProject2/" target="_blank" rel="noreferrer">Visit Site <i className="bi bi-arrow-right"></i></a>
                             </div>
                           }
                           width={cardWidth}
                           height={cardHeight(1080 / 1920)}
                           radius={18}
-                          background="#ffffff"
-                          color="#111827"
+                          background="linear-gradient(135deg, #0f172a 0%, #3b0764 60%, #581c87 100%)"
+                          color="#ffffff"
                           shadowColor="#111827"
                           glareOpacity={0.18}
                           ariaLabel="Araña project card"
@@ -433,18 +439,20 @@ function App() {
                         <FlipCard
                           front={<img src={UcookW} alt="U Cookin project preview" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />}
                           back={
-                            <div className="flipCardBack">
+                            <div className="flipCardBack flipCardBack--cook">
+                              <span className="flipCardNum">04</span>
+                              <span className="flipCardBadge"><i className="bi bi-egg-fried"></i></span>
                               <span className="flipCardTag">U Cookin</span>
-                              <span className="flipCardStack">ReactJs, NodeJS, MySQL</span>
+                              <span className="flipCardStack">ReactJs · NodeJS · MySQL</span>
                               <p className="flipCardDesc">A full-stack cooking web app built with React, Node.js, and MySQL.</p>
-                              <a className="flipCardLink" href="https://capstone-kodego-m39pjmzzk-wadze213.vercel.app/?fbclid=IwAR34eXrT2dAKNIsC_DqIwYDp3iyCI7RJBuplSVH8wbRgmRpp1HhZchpA1YE%5C" target="_blank" rel="noreferrer">Visit Site <i className="bi bi-box-arrow-up-right"></i></a>
+                              <a className="flipCardLink" href="https://capstone-kodego-m39pjmzzk-wadze213.vercel.app/?fbclid=IwAR34eXrT2dAKNIsC_DqIwYDp3iyCI7RJBuplSVH8wbRgmRpp1HhZchpA1YE%5C" target="_blank" rel="noreferrer">Visit Site <i className="bi bi-arrow-right"></i></a>
                             </div>
                           }
                           width={cardWidth}
                           height={cardHeight(1080 / 1920)}
                           radius={18}
-                          background="#ffffff"
-                          color="#111827"
+                          background="linear-gradient(135deg, #9a3412 0%, #c2410c 50%, #dc2626 100%)"
+                          color="#ffffff"
                           shadowColor="#111827"
                           glareOpacity={0.18}
                           ariaLabel="U Cookin project card"
