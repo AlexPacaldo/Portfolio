@@ -328,6 +328,10 @@
             font-size: 1rem;
             transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
         }
+        .skillIcon--brand svg{
+            width: 18px;
+            height: 18px;
+        }
         .skill-item span:last-child{
             font-size: 0.88rem;
         }
@@ -362,27 +366,6 @@
             text-align: center;
             margin-bottom: 48px;
         }
-        .aboutEyebrow{
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: #f4f4fb;
-            border: 1px solid #ececf7;
-            color: #111827;
-            font-size: 0.75rem;
-            font-weight: 700;
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
-            padding: 8px 16px;
-            border-radius: 999px;
-        }
-        .aboutEyebrow::before{
-            content: '';
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background: #111827;
-        }
         .aboutHeader h1{
             font-size: clamp(2rem, 5vw, 3rem);
             font-weight: 800;
@@ -392,7 +375,7 @@
             margin: 18px 0 14px;
         }
         .aboutAccent{
-            color: #6b7280;
+            color: #111827;
         }
         .aboutLead{
             color: #6b7280;
@@ -469,32 +452,6 @@
             border-radius: 50%;
             background: radial-gradient(circle, rgba(255, 255, 255, 0.14), transparent 70%);
             pointer-events: none;
-        }
-        .aboutStatus{
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.16);
-            padding: 6px 14px;
-            border-radius: 999px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            letter-spacing: 0.06em;
-            color: #ffffff;
-            margin-bottom: 18px;
-        }
-        .statusDot{
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: #4ade80;
-            animation: statusPulse 2s infinite;
-        }
-        @keyframes statusPulse{
-            0%{ box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.55); }
-            70%{ box-shadow: 0 0 0 8px rgba(74, 222, 128, 0); }
-            100%{ box-shadow: 0 0 0 0 rgba(74, 222, 128, 0); }
         }
         .factsList{
             display: flex;
