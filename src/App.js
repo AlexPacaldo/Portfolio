@@ -223,12 +223,21 @@ function App() {
           <div className='d-flex justify-content-center'>
             <div className="articleCont container-fluid">
               <div className='About'>
-                <h1 data-aos="zoom-in"><b>About Me</b></h1>
                 <div className='Aboutt'>
 
+                  <div className="aboutHeader" data-aos="zoom-in">
+                    <span className="aboutEyebrow">About Me</span>
+                    <h1>Aspiring <span className="aboutAccent">Full-Stack Developer</span></h1>
+                    <p className="aboutLead">
+                      A 22-year-old web developer from Cainta, Rizal, Philippines, currently pursuing a
+                      Bachelor of Science in Computer Science.
+                    </p>
+                  </div>
+
                   <div className='grid1about'>
-                
-                    <div className="AboutDesc d-flex flex-column flex-md-row" data-aos="fade-right">
+
+                    <div className="AboutDesc" data-aos="fade-right">
+                      <span className="sectionTag">Get To Know Me</span>
                       <p className="aboutME">
                         Hello! My name is Alexander John G. Pacaldo, a 22-year-old aspiring web developer from
                         Cainta, Rizal, Philippines. I am currently in my third year of a Bachelor of Science in
@@ -245,21 +254,35 @@ function App() {
                       </p>
                     </div>
 
-                    <div className="skills-grid" data-aos="fade-left">
-                      <div className="skill-item">💻 GitHub</div>
-                      <div className="skill-item">🌐 HTML5</div>
-                      <div className="skill-item">🎨 CSS3</div>
-                      <div className="skill-item">📱 Responsive Design</div>
-                      <div className="skill-item">⚙️ JavaScript</div>
-                      <div className="skill-item">☕ Java</div>
-                      <div className="skill-item">🧩 Bootstrap</div>
-                      <div className="skill-item">⚛️ ReactJS</div>
-                      <div className="skill-item">🔗 Node.js</div>
-                      <div className="skill-item">🛢️ MySQL</div>
-                      <div className="skill-item">🔣 C#</div>
+                    <aside className="aboutStats" data-aos="fade-left">
+                      <span className="sectionTag sectionTag--dark">Quick Facts</span>
+                      <div className="statsGrid">
+                        <div className="statCell"><strong>11+</strong><span>Skills &amp; Tools</span></div>
+                        <div className="statCell"><strong>3rd Yr</strong><span>BS Computer Science</span></div>
+                        <div className="statCell"><strong>12 wks</strong><span>Intensive Bootcamp</span></div>
+                        <div className="statCell"><strong>Top</strong><span>Student Recognition</span></div>
+                      </div>
+                    </aside>
+
+                    <div className="skillsSection" data-aos="fade-right">
+                      <span className="sectionTag">Tech Stack</span>
+                      <div className="skills-grid">
+                        <div className="skill-item">💻 GitHub</div>
+                        <div className="skill-item">🌐 HTML5</div>
+                        <div className="skill-item">🎨 CSS3</div>
+                        <div className="skill-item">📱 Responsive Design</div>
+                        <div className="skill-item">⚙️ JavaScript</div>
+                        <div className="skill-item">☕ Java</div>
+                        <div className="skill-item">🧩 Bootstrap</div>
+                        <div className="skill-item">⚛️ ReactJS</div>
+                        <div className="skill-item">🔗 Node.js</div>
+                        <div className="skill-item">🛢️ MySQL</div>
+                        <div className="skill-item">🔣 C#</div>
+                      </div>
                     </div>
-                    
-                    <div className='timeLcont' data-aos="fade-up">
+
+                    <div className='timeLcont' data-aos="fade-left">
+                      <span className="sectionTag">Education &amp; Experience</span>
                       <div className="timeline">
                         <div className="timeCont">
                           <h5>August 2023 - Present</h5>
@@ -274,7 +297,6 @@ function App() {
                             <b>Recognitions:</b> Top Student, Best Mini Project 2
                           </h5>
                         </div>
-                        
                       </div>
                     </div>
 
