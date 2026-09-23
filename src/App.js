@@ -255,13 +255,32 @@ function App() {
                     </div>
 
                     <aside className="aboutStats" data-aos="fade-left">
-                      <span className="sectionTag sectionTag--dark">Quick Facts</span>
-                      <div className="statsGrid">
-                        <div className="statCell"><strong>11+</strong><span>Skills &amp; Tools</span></div>
-                        <div className="statCell"><strong>3rd Yr</strong><span>BS Computer Science</span></div>
-                        <div className="statCell"><strong>12 wks</strong><span>Intensive Bootcamp</span></div>
-                        <div className="statCell"><strong>Top</strong><span>Student Recognition</span></div>
+                      <span className="sectionTag sectionTag--dark">Fast Facts</span>
+                      <div className="factsList">
+                        <div className="factRow">
+                          <span className="factLabel">Based in</span>
+                          <span className="factValue">Cainta, Rizal, Philippines</span>
+                        </div>
+                        <div className="factRow">
+                          <span className="factLabel">Age</span>
+                          <span className="factValue">22</span>
+                        </div>
+                        <div className="factRow">
+                          <span className="factLabel">Seeking</span>
+                          <span className="factValue">Full-Stack / Front-End roles</span>
+                        </div>
+                        <div className="factRow">
+                          <span className="factLabel">Interests</span>
+                          <span className="factValue">Tech · Coding · Sports · Entertainment</span>
+                        </div>
                       </div>
+                      <hr className="aboutDivider" />
+                      <span className="sectionTag sectionTag--dark">Education</span>
+                      <ul className="eduList">
+                        <li>BS Computer Science · STI College Ortigas-Cainta</li>
+                        <li>KodeGo Bootcamp · Full-Stack Web Development</li>
+                        <li>Senior High School · STEM strand</li>
+                      </ul>
                     </aside>
 
                     <div className="skillsSection" data-aos="fade-right">
