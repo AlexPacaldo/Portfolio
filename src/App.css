@@ -151,17 +151,17 @@
         .recentProjCarousel{
             pointer-events: auto;
             position: relative;
-            height: 500px;
+            height: 380px;
             background-color: #000;
         }
         @media (min-width: 1177px) {
             .recentProjCarousel{
-                height: 850px;
+                height: 640px;
             }
         }
         @media (max-width: 767px) {
             .recentProjCarousel{
-                height: 420px;
+                height: 300px;
             }
         }
         .svgBot{
@@ -230,7 +230,7 @@
             background-color: #000;
             margin-bottom: -1px;
             padding-top: 10px;
-            padding-bottom:10px ;
+            padding-bottom: 4px;
             font-weight: 800;
             font-size: clamp(1.6rem, 5vw, 2.6rem);
 
@@ -415,6 +415,12 @@
             border-radius: 1.5rem;
             corner-shape: squircle();
             padding: clamp(24px, 5vw, 64px);
+        }
+        @media screen and (min-width: 768px) {
+            .ContactCont{
+                width: 80vw;
+                max-width: none;
+            }
         }
         .contactHead{
             text-align: center;
