@@ -133,6 +133,22 @@
   background: #fff;
 }
 
+@media (max-width: 767px) {
+  .depth-carousel__arrow {
+    width: 36px;
+    height: 36px;
+  }
+  .depth-carousel__arrow--prev {
+    left: 8px;
+  }
+  .depth-carousel__arrow--next {
+    right: 8px;
+  }
+  .depth-carousel__dots {
+    bottom: 12px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .depth-carousel__card {
     will-change: auto;

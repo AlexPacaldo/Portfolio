@@ -180,7 +180,8 @@ const DepthCarousel = ({
       const w = entries[0].contentRect.width;
       const cfg = cfgRef.current;
       const needed = cfg.cardWidth + Math.abs(cfg.spread) * 2 + 120;
-      scaleRef.current = clamp(w / needed, 0.4, 1);
+      const floor = clamp(w / (cfg.cardWidth + 48), 0.25, 0.42);
+      scaleRef.current = clamp(w / needed, floor, 1);
       layout(posRef.current);
     });
     ro.observe(root);
