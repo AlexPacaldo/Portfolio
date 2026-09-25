@@ -59,7 +59,8 @@ function App() {
       turnstileRef.current = window.turnstile.render(widget, {
         sitekey: siteKey,
         theme: 'light',
-        language: 'auto'
+        language: 'auto',
+        size: 'flexible'
       });
       clearInterval(timer);
     }, 200);
@@ -599,7 +600,7 @@ function App() {
                         </div>
                         <div className="field">
                           {process.env.REACT_APP_TURNSTILE_SITE_KEY && (
-                            <div className="cf-turnstile turnstileWrap" data-sitekey={process.env.REACT_APP_TURNSTILE_SITE_KEY} data-theme="light" data-language="auto"></div>
+                            <div className="cf-turnstile turnstileWrap" data-sitekey={process.env.REACT_APP_TURNSTILE_SITE_KEY} data-theme="light" data-language="auto" data-size="flexible"></div>
                           )}
                         </div>
                         <button type="submit" className="btn submitBtn" disabled={formStatus === 'sending'}>

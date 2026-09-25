@@ -773,17 +773,18 @@
         .ContactCont{
             width: 100%;
             max-width: 1080px;
-            background: #ffffff;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+            background: linear-gradient(160deg, #1b2030 0%, #111827 70%);
+            color: #ffffff;
+            box-shadow: 0 20px 60px rgba(17, 24, 39, 0.3);
             overflow: hidden;
             border-radius: 1.5rem;
             corner-shape: squircle();
             padding: clamp(24px, 5vw, 64px);
         }
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width: 821px) {
             .ContactCont{
                 width: 80vw;
-                max-width: none;
+                max-width: 1080px;
             }
         }
         .contactHead{
@@ -794,10 +795,10 @@
             font-size: clamp(2rem, 5vw, 2.75rem);
             font-weight: 800;
             letter-spacing: -0.02em;
-            color: #141414;
+            color: #ffffff;
         }
         .contactHead .contactSub{
-            color: #6b7280;
+            color: rgba(255, 255, 255, 0.68);
             font-size: 1.05rem;
             line-height: 1.6;
             max-width: 560px;
@@ -811,13 +812,14 @@
         }
         @media (max-width: 820px){
             .contactGrid{
-                grid-template-columns: 1fr;
+                grid-template-columns: minmax(0, 1fr);
             }
         }
         .contactInfo{
             display: flex;
             flex-direction: column;
             gap: 14px;
+            min-width: 0;
         }
         .infoCard{
             display: flex;
@@ -857,6 +859,7 @@
             flex-direction: column;
             gap: 2px;
             line-height: 1.2;
+            min-width: 0;
         }
         .infoLabel{
             font-size: 0.72rem;
@@ -894,6 +897,7 @@
             border-radius: 1.25rem;
             corner-shape: squircle();
             padding: clamp(20px, 3vw, 32px);
+            min-width: 0;
         }
         .contactForm{
             display: flex;
@@ -931,6 +935,8 @@
             min-height: 130px;
         }
         .turnstileWrap{
+            width: 100%;
+            max-width: 300px;
             margin-top: 2px;
         }
         .ContactCont .submitBtn{
@@ -965,7 +971,7 @@
             color: #dc2626;
         }
 
-        @media (min-width: 500px) {
+        @media (min-width: 821px) {
             .contactGrid{
                 padding: 0 8px;
             }
